@@ -1,7 +1,6 @@
 package leon.casino.cardgames.blackjack;
 
-import leon.casino.BetCreator;
-import leon.casino.Console;
+import leon.tools.Console;
 import leon.casino.Profile;
 import leon.casino.ProfileManager;
 

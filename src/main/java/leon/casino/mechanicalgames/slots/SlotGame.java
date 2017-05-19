@@ -1,6 +1,6 @@
 package leon.casino.mechanicalgames.slots;
 
-import leon.casino.Console;
+import leon.tools.Console;
 import leon.casino.Profile;
 import leon.casino.ProfileManager;
 

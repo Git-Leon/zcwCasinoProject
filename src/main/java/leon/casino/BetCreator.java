@@ -1,5 +1,7 @@
 package leon.casino;
 
+import leon.tools.Console;
+
 /**
  * Created by leon on 5/17/17.
  */

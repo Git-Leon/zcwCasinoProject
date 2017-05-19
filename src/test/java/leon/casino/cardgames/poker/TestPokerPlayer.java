@@ -32,7 +32,7 @@ public class TestPokerPlayer implements TestConstants {
         double startingBalance = testProfile.getBalance();
         double earnings = 100;
         double expected = startingBalance + earnings;
-        pokerPlayer.collectEarnings(100);
+        pokerPlayer.collectEarnings(earnings);
 
         // : When
         double actual = testProfile.getBalance();

@@ -1,6 +1,6 @@
 package leon.casino.cardgames;
 
-import leon.casino.Console;
+import leon.tools.Console;
 import leon.casino.Player;
 import leon.casino.Profile;
 import leon.casino.cardgames.cardutilities.Card;

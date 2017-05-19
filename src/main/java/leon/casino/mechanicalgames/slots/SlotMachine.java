@@ -1,6 +1,6 @@
 package leon.casino.mechanicalgames.slots;
 
-import leon.casino.Console;
+import leon.tools.Console;
 
 /**
  * Created by sarahweisser on 5/11/17.

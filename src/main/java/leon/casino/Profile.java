@@ -1,5 +1,7 @@
 package leon.casino;
 
+import leon.tools.Console;
+
 public class Profile {
     private final long profileId;
     private final String name;

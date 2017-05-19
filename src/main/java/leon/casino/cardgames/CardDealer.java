@@ -4,11 +4,10 @@ package leon.casino.cardgames;
  * Created by leon on 5/11/17.
  */
 
-import leon.casino.Console;
+import leon.tools.Console;
 import leon.casino.Profile;
 import leon.casino.cardgames.cardutilities.Deck;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

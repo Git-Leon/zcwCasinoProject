@@ -1,4 +1,6 @@
-package leon.casino;
+package leon;
+
+import leon.casino.Casino;
 
 /**
  * Created by leon.hunter on 1/29/2017.

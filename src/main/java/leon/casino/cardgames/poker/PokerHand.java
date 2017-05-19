@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Created by cameronsima on 5/9/17.
  */
 public class PokerHand {
-    public static enum HandType {HIGHCARD, PAIR, TWOPAIR, THREEOFAKIND, STRAIGHT, FLUSH, FULLHOUSE, FOUROFAKIND, STRAIGHTFLUSH}
+    public enum HandType {HIGHCARD, PAIR, TWOPAIR, THREEOFAKIND, STRAIGHT, FLUSH, FULLHOUSE, FOUROFAKIND, STRAIGHTFLUSH}
 
     private final ArrayList<Card> cards;
 
@@ -65,13 +65,13 @@ public class PokerHand {
     }
 
     public int numberOfRanksPresent() {
-        ArrayList<Integer> ranks = new ArrayList<>();
+        ArrayList<Integer> ranksPresent = new ArrayList<>();
         for (Card c : cards){
-            if (!ranks.contains(c.getValue())) {
-                ranks.add(c.getValue());
+            if (!ranksPresent.contains(c.getValue())) {
+                ranksPresent.add(c.getValue());
             }
         }
-        return ranks.size();
+        return ranksPresent.size();
     }
 
     public HandType fiveRankHandChooser() {

@@ -2,7 +2,7 @@ package leon.casino.cardgames.poker;
 
 
 import leon.casino.BetCreator;
-import leon.casino.Console;
+import leon.tools.Console;
 import leon.casino.Profile;
 import leon.casino.ProfileManager;
 import leon.casino.cardgames.CardDealer;
