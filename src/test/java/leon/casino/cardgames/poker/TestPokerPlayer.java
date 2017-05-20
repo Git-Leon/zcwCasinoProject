@@ -1,12 +1,11 @@
 package leon.casino.cardgames.poker;
 
 import leon.casino.Profile;
-import leon.casino.TestConstants;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestPokerPlayer implements TestConstants {
+public class TestPokerPlayer {
     private PokerPlayer pokerPlayer;
     private Profile testProfile;
 

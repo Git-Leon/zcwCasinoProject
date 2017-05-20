@@ -1,10 +1,6 @@
 package leon.casino.cardgames.blackjack;
 
 import leon.casino.Profile;
-import leon.casino.TestConstants;
-import leon.casino.cardgames.CardDealer;
-import leon.casino.cardgames.CardPlayer;
-import leon.casino.cardgames.cardutilities.Deck;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +8,7 @@ import org.junit.Test;
 /**
  * Created by leon on 5/11/17.
  */
-public class TestBlackJackPlayer implements TestConstants {
+public class TestBlackJackPlayer {
 
     private Profile testProfile;
 

@@ -5,7 +5,6 @@ package leon.casino.cardgames;
  */
 
 import leon.casino.Profile;
-import leon.casino.TestConstants;
 import leon.casino.cardgames.cardutilities.Deck;
 import leon.tools.RandomUtils;
 import org.junit.Assert;
@@ -15,7 +14,7 @@ import org.junit.Test;
 /**
  * Created by leon.hunter on 2/1/2017.
  */
-public class TestCardDealer implements TestConstants {
+public class TestCardDealer {
     private Deck testDeck;
     private Profile testProfile;
     private CardPlayer testCardPlayer;

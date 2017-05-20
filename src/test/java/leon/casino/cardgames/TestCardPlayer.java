@@ -1,7 +1,6 @@
 package leon.casino.cardgames;
 
 import leon.casino.Profile;
-import leon.casino.TestConstants;
 import leon.casino.cardgames.cardutilities.Deck;
 import org.junit.Assert;
 import org.junit.Before;
@@ -10,7 +9,7 @@ import org.junit.Test;
 /**
  * Created by leon.hunter on 2/1/2017.
  */
-public class TestCardPlayer implements TestConstants {
+public class TestCardPlayer {
     private Deck testDeck;
     private CardPlayer testCardPlayer;
     private Profile testProfile;

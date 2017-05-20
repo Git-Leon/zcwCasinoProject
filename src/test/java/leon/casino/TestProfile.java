@@ -3,7 +3,7 @@ package leon.casino;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestProfile implements TestConstants {
+public class TestProfile {
     Profile testProfile = new Profile("TestProfile", 99999999);
 
     @Test
