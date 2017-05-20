@@ -33,6 +33,6 @@ public class TestBlackJackDealer {
         int handTotal = bjd.getHandTotal();
 
         // : Then
-        Assert.assertTrue(handTotal>17);
+        Assert.assertTrue(handTotal>=17);
     }
 }

@@ -31,7 +31,7 @@ public class CardDealer extends CardPlayer {
 
     public final void deal(CardPlayer player, int numberOfCards) {
         Console.printDashes();
-        Console.println("The dealer is dealing cards to [ %s ]", player.profile.getName());
+        Console.println("The dealer is dealing %s cards to [ %s ]", numberOfCards, player.profile.getName());
         for (int i = 0; i < numberOfCards; i++) {
             player.getCard(this.deck);
         }
