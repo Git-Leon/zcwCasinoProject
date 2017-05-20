@@ -2,46 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cffc421-6483-4c9b-bc15-0310a759c8ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/leon/tools/Console.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/leon/casino/CasinoTestClass.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/Console.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/leon/casino/Console.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/leon/casino/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/leon/TestConstants.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/Main.java" afterPath="$PROJECT_DIR$/src/main/java/leon/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/leon/casino/BetCreator.class" afterPath="$PROJECT_DIR$/target/classes/leon/casino/BetCreator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/leon/casino/Casino.class" afterPath="$PROJECT_DIR$/target/classes/leon/casino/Casino.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/leon/casino/Profile.class" afterPath="$PROJECT_DIR$/target/classes/leon/casino/Profile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/leon/casino/ProfileManager.class" afterPath="$PROJECT_DIR$/target/classes/leon/casino/ProfileManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/leon/casino/cardgames/CardDealer.class" afterPath="$PROJECT_DIR$/target/classes/leon/casino/cardgames/CardDealer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/leon/casino/cardgames/CardPlayer.class" afterPath="$PROJECT_DIR$/target/classes/leon/casino/cardgames/CardPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/leon/casino/cardgames/blackjack/BlackJackGame.class" afterPath="$PROJECT_DIR$/target/classes/leon/casino/cardgames/blackjack/BlackJackGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/leon/casino/cardgames/poker/PokerGame.class" afterPath="$PROJECT_DIR$/target/classes/leon/casino/cardgames/poker/PokerGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/leon/casino/mechanicalgames/slots/SlotGame.class" afterPath="$PROJECT_DIR$/target/classes/leon/casino/mechanicalgames/slots/SlotGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/leon/casino/mechanicalgames/slots/SlotMachine.class" afterPath="$PROJECT_DIR$/target/classes/leon/casino/mechanicalgames/slots/SlotMachine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/leon/casino/mechanicalgames/slots/SlotPlayer.class" afterPath="$PROJECT_DIR$/target/classes/leon/casino/mechanicalgames/slots/SlotPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/leon/casino/TestProfile.class" afterPath="$PROJECT_DIR$/target/test-classes/leon/casino/TestProfile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/TestCardDealer.class" afterPath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/TestCardDealer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/TestCardPlayer.class" afterPath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/TestCardPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/blackjack/TestBlackJackPlayer.class" afterPath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/blackjack/TestBlackJackPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/cardutilities/TestDeck.class" afterPath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/cardutilities/TestDeck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/poker/TestPokerPlayer.class" afterPath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/poker/TestPokerPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/leon/casino/mechanicalgames/TestMechanicalPlayer.class" afterPath="$PROJECT_DIR$/target/test-classes/leon/casino/mechanicalgames/TestMechanicalPlayer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/BetCreator.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/BetCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/Casino.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/Casino.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/Profile.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/Profile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/ProfileManager.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/ProfileManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardDealer.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardDealer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardPlayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/blackjack/BlackJackGame.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/blackjack/BlackJackGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/poker/PokerGame.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/poker/PokerGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/poker/PokerHand.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/poker/PokerHand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/mechanicalgames/slots/SlotGame.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/mechanicalgames/slots/SlotGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/mechanicalgames/slots/SlotMachine.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/mechanicalgames/slots/SlotMachine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leon/casino/mechanicalgames/slots/SlotPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/leon/casino/mechanicalgames/slots/SlotPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/poker/TestPokerHand.java" afterPath="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/poker/TestPokerHand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/poker/TestPokerPlayer.java" afterPath="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/poker/TestPokerPlayer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,48 +17,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestBlackJackPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/leon/casino/cardgames/blackjack/TestBlackJackPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestDeck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/leon/casino/cardgames/cardutilities/TestDeck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestCardDealer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/leon/casino/cardgames/TestCardDealer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestCardPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/leon/casino/cardgames/TestCardPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CardGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardGame.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -107,12 +27,79 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PokerGame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CardDealer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardDealer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokerGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/poker/PokerGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <state relative-caret-position="153">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlackJackGame.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/blackjack/BlackJackGame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Casino.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/Casino.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Console.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/leon/tools/Console.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#390#391#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BetCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/BetCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+              <folding>
+                <element signature="e#430#431#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,26 +126,6 @@
                 <element signature="e#452#453#0" expanded="true" />
                 <element signature="e#511#512#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestPokerHand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/leon/casino/cardgames/poker/TestPokerHand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestPokerPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/leon/casino/cardgames/poker/TestPokerPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="33" column="53" lean-forward="true" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -198,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/poker/PokerHand.java" />
         <option value="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/CardDealer.java" />
         <option value="$PROJECT_DIR$/src/main/java/leon/casino/Profile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/blackjack/BlackJackGame.java" />
         <option value="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardDealer.java" />
         <option value="$PROJECT_DIR$/src/main/java/leon/casino/mechanicalgames/slots/SlotGame.java" />
         <option value="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/CardPlayer.java" />
@@ -232,6 +198,7 @@
         <option value="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/poker/TestPokerPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/poker/PokerHand.java" />
         <option value="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/poker/PokerGame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/leon/casino/cardgames/blackjack/BlackJackGame.java" />
       </list>
     </option>
   </component>
@@ -656,6 +623,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="casino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="casino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="leon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="casino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cardgames" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blackjack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -1060,12 +1065,6 @@
     <history-entry file="TestBlackJackDealer - 2017.05.19 at 19h 27m 15s.xml">
       <configuration name="TestBlackJackDealer" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCardPlayer_testGetHandTotal - 2017.05.19 at 15h 49m 44s.xml">
-      <configuration name="TestCardPlayer.testGetHandTotal" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCardPlayer_testGetHandTotal - 2017.05.19 at 15h 49m 46s.xml">
-      <configuration name="TestCardPlayer.testGetHandTotal" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestSuiteFullRegression - 2017.05.19 at 15h 49m 51s.xml">
       <configuration name="TestSuiteFullRegression" configurationId="JUnit" />
     </history-entry>
@@ -1081,9 +1080,16 @@
     <history-entry file="TestSuiteFullRegression - 2017.05.19 at 19h 45m 54s.xml">
       <configuration name="TestSuiteFullRegression" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestSuiteFullRegression - 2017.05.19 at 19h 59m 46s.xml">
+      <configuration name="TestSuiteFullRegression" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestSuiteFullRegression - 2017.05.19 at 20h 00m 43s.xml">
+      <configuration name="TestSuiteFullRegression" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1440" y="23" width="1440" height="873" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1094,13 +1100,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4071703" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33056995" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1205,22 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/BetCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardDealer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/mechanicalgames/slots/SlotGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1317,17 +1307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="e#430#431#0" expanded="false" />
-            <element signature="e#460#461#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/leon/casino/mechanicalgames/TestMechanicalPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1356,22 +1335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/Casino.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/blackjack/BlackJackGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1408,26 +1371,6 @@
         <state relative-caret-position="75">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leon/tools/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#825#826#0" expanded="true" />
-            <element signature="e#1645#1646#0" expanded="true" />
-            <element signature="e#1693#1694#0" expanded="true" />
-            <element signature="e#3046#3047#0" expanded="true" />
-            <element signature="e#3114#3115#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1536,14 +1479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/poker/PokerPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1566,10 +1501,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/leon/tools/Console.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/Casino.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/BetCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/CardDealer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/poker/PokerGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        <state relative-caret-position="153">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/leon/casino/cardgames/blackjack/BlackJackGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
           <folding />
         </state>
       </provider>

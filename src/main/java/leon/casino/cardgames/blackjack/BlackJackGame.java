@@ -1,5 +1,6 @@
 package leon.casino.cardgames.blackjack;
 
+import leon.casino.cardgames.CardGame;
 import leon.tools.Console;
 import leon.casino.Profile;
 import leon.casino.ProfileManager;
@@ -7,7 +8,7 @@ import leon.casino.ProfileManager;
 /**
  * Created by leon.hunter on 1/29/2017.
  */
-public class BlackJackGame {
+public class BlackJackGame extends CardGame {
     private BlackJackPlayer[] currentPlayers;
     private BlackJackDealer dealer;
 
