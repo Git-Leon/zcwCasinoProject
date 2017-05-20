@@ -16,6 +16,7 @@ public class TestBlackJackPlayer {
     public void setup() {
         this.testProfile = new Profile("TestProfile", 99999999);
     }
+    
     @Test
     public void testGetBet() {
         // : Given
