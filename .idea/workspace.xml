@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cffc421-6483-4c9b-bc15-0310a759c8ca" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/leon/casino/TestProfile.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/blackjack/TestBlackJackPlayer.java" afterPath="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/blackjack/TestBlackJackPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/blackjack/TestBlackJackPlayer.class" afterPath="$PROJECT_DIR$/target/test-classes/leon/casino/cardgames/blackjack/TestBlackJackPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -91,15 +92,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestBlackJackPlayer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestBlackJackPlayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/leon/casino/cardgames/blackjack/TestBlackJackPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="224">
               <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding>
                 <element signature="e#289#290#0" expanded="true" />
                 <element signature="e#360#361#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,6 +204,7 @@
         <option value="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/TestCardPlayer.java" />
         <option value="$PROJECT_DIR$/src/test/java/leon/casino/TestProfile.java" />
         <option value="$PROJECT_DIR$/src/test/java/leon/casino/cardgames/blackjack/TestBlackJackPlayer.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -973,9 +985,6 @@
     <history-entry file="TestProfile_testGetBalance - 2017.05.19 at 20h 11m 34s.xml">
       <configuration name="TestProfile.testGetBalance" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSuiteFullRegression - 2017.05.19 at 19h 45m 54s.xml">
-      <configuration name="TestSuiteFullRegression" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestSuiteFullRegression - 2017.05.19 at 19h 59m 46s.xml">
       <configuration name="TestSuiteFullRegression" configurationId="JUnit" />
     </history-entry>
@@ -998,6 +1007,9 @@
       <configuration name="TestSuiteFullRegression" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestSuiteFullRegression - 2017.05.19 at 20h 25m 21s.xml">
+      <configuration name="TestSuiteFullRegression" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestSuiteFullRegression - 2017.05.19 at 20h 26m 18s.xml">
       <configuration name="TestSuiteFullRegression" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1049,14 +1061,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/leon/casino/cardgames/blackjack/BlackJackGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/leon/tools/RandomUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1481,12 +1485,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/leon/casino/cardgames/blackjack/TestBlackJackPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="224">
           <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
             <element signature="e#289#290#0" expanded="true" />
             <element signature="e#360#361#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
