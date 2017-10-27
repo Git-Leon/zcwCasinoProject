@@ -8,7 +8,7 @@ import leon.casino.cardgames.TestCardDealer;
 import leon.casino.cardgames.TestCardPlayer;
 import leon.casino.cardgames.blackjack.TestBlackJackDealer;
 import leon.casino.cardgames.blackjack.TestBlackJackPlayer;
-import leon.casino.cardgames.cardutilities.TestDeck;
+import leon.casino.cardgames.cardutilities.TestCardDeck;
 import leon.casino.cardgames.poker.TestPokerHand;
 import leon.casino.cardgames.poker.TestPokerPlayer;
 import leon.casino.mechanicalgames.TestMechanicalPlayer;
@@ -20,7 +20,7 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         TestBlackJackDealer.class,
         TestBlackJackPlayer.class,
-        TestDeck.class,
+        TestCardDeck.class,
         TestPokerHand.class,
         TestPokerPlayer.class,
         TestCardDealer.class,

@@ -1,28 +1,51 @@
 package leon.casino.cardgames.cardutilities;
 
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.Stack;
 
 /**
  * Created by leon.hunter on 2/1/2017.
  */
 
-public class Deck extends Stack<Card> {
+public class Deck implements Iterable<Card> {
+    private Stack<Card> cardStack = new Stack<>();
+
     public Deck() {
-        super();
-        final String[] suits = {"Hearts ♥", "Diamonds ♦", "Clubs ♣", "Spades ♠"};
-
-        for (int i = 0; i < suits.length; i++) {
-            for (int j = 0; j < 13; j++) {
-                Face face = new Face(j);
-                Suit suit = new Suit(suits[i]);
-
-                this.push(new Card(face, suit));
+        for (Suit suit : Suit.values()) {
+            for (Rank rank : Rank.values()) {
+                Card card = new Card(rank, suit);
+                cardStack.push(card);
             }
         }
     }
 
+    public Card pop() {
+        return cardStack.pop();
+    }
+
+    public Card push(Card card) {
+        return cardStack.push(card);
+    }
+
+    public Card peek() {
+        return cardStack.peek();
+    }
+
+    public boolean isEmpty() {
+        return cardStack.isEmpty();
+    }
+
     public void shuffle() {
-        Collections.shuffle(this);
+        Collections.shuffle(cardStack);
+    }
+
+    @Override
+    public Iterator iterator() {
+        return cardStack.iterator();
+    }
+
+    public int size() {
+        return cardStack.size();
     }
 }

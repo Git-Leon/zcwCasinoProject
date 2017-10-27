@@ -5,16 +5,17 @@ package leon.casino.cardgames.cardutilities;
  */
 
 public class Card {
-    private final Suit suit;
-    private final Face face;
 
-    public Card(Face face, Suit suit) {
-        this.face = face;
+    private final Rank rank;
+    private final Suit suit;
+
+    public Card(Rank rank, Suit suit) {
+        this.rank = rank;
         this.suit = suit;
     }
 
-    public Face getFace() {
-        return this.face;
+    public Rank getRank() {
+        return rank;
     }
 
     public Suit getSuit() {
@@ -22,10 +23,6 @@ public class Card {
     }
 
     public int getValue() {
-        return this.getFace().getValue();
-    }
-
-    public String toString() {
-        return getFace() + " of " + getSuit();
+        return rank.getValue();
     }
 }

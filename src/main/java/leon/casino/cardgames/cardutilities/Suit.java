@@ -3,18 +3,23 @@ package leon.casino.cardgames.cardutilities;
 /**
  * Created by leon.hunter on 2/1/2017.
  */
-public class Suit {
-    private String name;
+public enum Suit {
+    HEARTS("♥"),
+    DIAMONDS("♦"),
+    CLUBS("♣"),
+    SPADES("♠");
 
-    public Suit(String name) {
-        this.name = name;
+    private String cardGraphic;
+
+    Suit(String cardGraphic) {
+        this.cardGraphic = cardGraphic;
     }
 
-    public String getName() {
-        return this.name;
+    public String getCardGraphic() {
+        return cardGraphic;
     }
 
-    public String toString() {
-        return getName();
+    public static int length() {
+        return values().length;
     }
 }
