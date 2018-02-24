@@ -34,7 +34,7 @@ public class SlotMachine {
             int earningMultiplierValue = Math.abs(reelImageValue/1000);
             int earningValue = reelImageValue * earningMultiplierValue;
             Console.println("Congratulations, you have earned $[ %s ]!", earningValue);
-            player.profile.increaseBalance(earningValue);
+            player.getProfile().increaseBalance(earningValue);
             return 0;
         } else {
             System.out.println("No Match.  Please try again.");

@@ -25,4 +25,8 @@ public class Card {
     public int getValue() {
         return rank.getValue();
     }
+
+    public String toString() {
+        return getRank().name() + " of " + getSuit().name();
+    }
 }

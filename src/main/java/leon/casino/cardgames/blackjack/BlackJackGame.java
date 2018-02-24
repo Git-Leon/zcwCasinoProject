@@ -28,9 +28,10 @@ public class BlackJackGame extends CardGame {
     private void play(BlackJackPlayer player) {
         String moveDecision;
         do {
+            Profile playerProfile = player.getProfile();
             String playerState = player.getState();
-            String playerName = player.profile.getName();
-            double playerBalance = player.profile.getBalance();
+            String playerName = playerProfile.getName();
+            double playerBalance = playerProfile.getBalance();
             int playerBet = player.getBetAmount().intValue();
             int playerHandTotal = player.getHandTotal();
             int dealerHandTotal = dealer.getHandTotal();
@@ -46,20 +47,20 @@ public class BlackJackGame extends CardGame {
             switch (playerState) {
                 case "blackjack":
                     Console.println("CardPlayer blackjack!");
-                    player.profile.increaseBalance(playerBet);
+                    playerProfile.increaseBalance(playerBet);
                     return;
                 case "bust":
                     Console.println("CardPlayer Bust!");
-                    player.profile.decreaseBalance(playerBet);
+                    playerProfile.decreaseBalance(playerBet);
                     return;
                 case "done":
                     String baseMessage = "[ %s ] has a %s  hand then the dealer.";
                     if (playerHandTotal > dealerHandTotal) {
                         Console.println(baseMessage, playerName, "better");
-                        player.profile.increaseBalance(playerBet);
+                        playerProfile.increaseBalance(playerBet);
                     } else {
                         Console.println(baseMessage, playerName, "worse");
-                        player.profile.decreaseBalance(playerBet);
+                        playerProfile.decreaseBalance(playerBet);
                     }
                     return;
                 case "under":
