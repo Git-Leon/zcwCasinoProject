@@ -39,11 +39,7 @@ public final class Console {
     }
 
     public static void repeatPrint(int numberOfRepeats, String val) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < numberOfRepeats; i++) {
-            sb.append(val);
-        }
-        print(sb.toString());
+        print(StringUtils.repeatString(val, numberOfRepeats));
     }
 
     private static class ConsoleSingleton {

@@ -1,6 +1,7 @@
 package leon.casino.cardgames.blackjack;
 
 import leon.casino.Profile;
+import leon.casino.cardgames.blackjack.player.BlackJackPlayer;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

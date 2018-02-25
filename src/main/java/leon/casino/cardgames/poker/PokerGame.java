@@ -13,7 +13,7 @@ import java.util.ArrayList;
 /**
  * Created by jarrydstamatelos on 5/9/17.
  */
-public class PokerGame extends CardGame {
+public class PokerGame implements CardGame {
     private final ArrayList<PokerPlayer> players = new ArrayList<>();
     private final CardDealer dealer = new CardDealer();
 
