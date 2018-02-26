@@ -2,7 +2,7 @@ package leon.casino.games.cardgames;
 
 import leon.tools.Console;
 import leon.casino.games.Player;
-import leon.casino.Profile;
+import leon.casino.profile.Profile;
 import leon.casino.games.cardgames.cardutilities.Card;
 import leon.casino.games.cardgames.cardutilities.Deck;
 
@@ -20,11 +20,7 @@ public class CardPlayer extends Player {
 
     public void getCard(Deck deck) {
         Card card = deck.pop();
-        String cardName = card.toString();
-
         this.hand.add(card);
-        Console.println("[ %s ] has been added to hand of [ %s ]", cardName, profileName);
-        printHandTotal();
     }
 
     public int getHandTotal() {
@@ -34,6 +30,7 @@ public class CardPlayer extends Player {
         }
         return total;
     }
+
 
     public void printHand() {
         Console.printDashes();
@@ -45,9 +42,5 @@ public class CardPlayer extends Player {
         } else {
             Console.println("The contents of [ %s ]'s hand is empty", profileName);
         }
-    }
-
-    public void printHandTotal() {
-        Console.println("[ %s ]'s hand-total is [ %s ]", profileName, getHandTotal());
     }
 }

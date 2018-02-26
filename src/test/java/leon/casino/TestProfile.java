@@ -1,5 +1,6 @@
 package leon.casino;
 
+import leon.casino.profile.Profile;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,7 +10,7 @@ public class TestProfile {
 
     @Before
     public void setup() {
-        this.testProfile = new Profile("TestProfile", 99999999);
+        this.testProfile = new Profile(null, null, null);
     }
 
     @Test

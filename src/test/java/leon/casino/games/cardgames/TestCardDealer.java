@@ -4,7 +4,7 @@ package leon.casino.games.cardgames;
  * Created by leon on 5/11/17.
  */
 
-import leon.casino.Profile;
+import leon.casino.profile.Profile;
 import leon.casino.games.cardgames.cardutilities.Deck;
 import leon.tools.RandomUtils;
 import org.junit.Assert;
@@ -23,7 +23,7 @@ public class TestCardDealer {
     @Before
     public void setup() {
         this.testDeck = new Deck();
-        this.testProfile = new Profile("TestProfile", 99999999);
+        this.testProfile = new Profile(null, null, null);
         this.testCardPlayer = new CardPlayer(testProfile);
         this.testCardDealer = new CardDealer(testDeck);
     }

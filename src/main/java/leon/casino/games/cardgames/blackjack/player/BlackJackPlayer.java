@@ -1,6 +1,6 @@
 package leon.casino.games.cardgames.blackjack.player;
 
-import leon.casino.Profile;
+import leon.casino.profile.Profile;
 import leon.casino.games.cardgames.CardPlayer;
 import leon.tools.StringAssembler;
 

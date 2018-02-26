@@ -1,6 +1,6 @@
 package leon.casino.games.cardgames.blackjack;
 
-import leon.casino.Profile;
+import leon.casino.profile.Profile;
 import leon.casino.games.cardgames.blackjack.player.BlackJackPlayer;
 import org.junit.Assert;
 import org.junit.Before;
@@ -15,7 +15,7 @@ public class TestBlackJackPlayer {
 
     @Before
     public void setup() {
-        this.testProfile = new Profile("TestProfile", 99999999);
+        this.testProfile = new Profile(null, null, null);
     }
     
     @Test

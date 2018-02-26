@@ -1,5 +1,6 @@
 package leon.casino;
 
+import leon.casino.profile.Profile;
 import leon.tools.Console;
 
 /**

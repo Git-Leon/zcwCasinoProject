@@ -1,11 +1,11 @@
 package leon.casino.games;
 
-import leon.casino.Profile;
+import leon.casino.profile.Profile;
 
 /**
  * Created by leon on 5/11/17.
  */
-public class Player {
+public class Player implements PlayerInterface {
     protected final Profile profile;
     protected final String profileName;
 

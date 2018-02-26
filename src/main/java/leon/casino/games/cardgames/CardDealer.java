@@ -4,12 +4,14 @@ package leon.casino.games.cardgames;
  * Created by leon on 5/11/17.
  */
 
-import leon.casino.Profile;
+import leon.casino.profile.Profile;
 import leon.casino.games.cardgames.cardutilities.Deck;
 import leon.tools.Console;
 
 import java.util.Arrays;
 import java.util.List;
+
+import static java.lang.Long.*;
 
 /**
  * Created by leon.hunter on 2/1/2017.
@@ -23,7 +25,7 @@ public class CardDealer extends CardPlayer {
 
     // This constructor exists for testing purposes
     public CardDealer(Deck deck) {
-        super(new Profile("DEALER", 0));
+        super(new Profile("DEALER", null, null));
         this.deck = deck;
         this.deck.shuffle();
     }

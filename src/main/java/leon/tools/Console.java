@@ -20,6 +20,10 @@ public final class Console {
         return console.getStringInput(prompt, args);
     }
 
+    public static String getStringInput() {
+        return console.getStringInput("");
+    }
+
     public static Double getDoubleInput(String prompt, Object... args) {
         return console.getDoubleInput(prompt, args);
     }

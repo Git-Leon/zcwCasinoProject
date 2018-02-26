@@ -1,6 +1,6 @@
 package leon.casino.games.cardgames;
 
-import leon.casino.Profile;
+import leon.casino.profile.Profile;
 import leon.casino.games.cardgames.cardutilities.Deck;
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,7 +18,7 @@ public class TestCardPlayer {
     @Before
     public void setup() {
         this.testDeck = new Deck();
-        this.testProfile = new Profile("TestProfile", 99999999);
+        this.testProfile = new Profile(null, null, null);
         this.testCardPlayer = new CardPlayer(testProfile);
     }
 

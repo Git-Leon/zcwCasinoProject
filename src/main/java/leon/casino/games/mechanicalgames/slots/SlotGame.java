@@ -1,64 +1,48 @@
 package leon.casino.games.mechanicalgames.slots;
 
-import leon.casino.games.GameInterface;
-import leon.tools.Console;
-import leon.casino.Profile;
-import leon.casino.ProfileManager;
+import leon.casino.games.utils.Game;
 
 /**
- * Created by jarrydstamatelos on 5/9/17.
+ * Created by sarahweisser on 5/11/17.
  */
-public class SlotGame implements GameInterface {
 
+public class SlotGame extends Game<SlotPlayer> {
+    private ReelImage image1;
+    private ReelImage image2;
+    private ReelImage image3;
 
-    public void play() {
-        Profile profile = ProfileManager.selectProfile();
-        SlotPlayer player = new SlotPlayer(profile);
-        play(player);
+    public void spinReel() {
+        this.image1 = ReelImage.getRandom();
+        this.image2 = ReelImage.getRandom();
+        this.image3 = ReelImage.getRandom();
     }
 
-
-    public void play(SlotPlayer player) {
-        Profile playerProfile = player.getProfile();
-        SlotMachine slotMachine = new SlotMachine(player);
-        String response;
-        do {
-            String playerName = playerProfile.getName();
-            double playerBalance = playerProfile.getBalance();
-            int playerBet = playerProfile.createBetAmount().intValue();
-
-
-            Console.printDashes();
-            Console.println("Hey, [ %s ]!", playerName.toUpperCase());
-            Console.println("Your current balance is [ %s ]", playerBalance);
-            Console.println("You have currently bet an amount of [ %s ].", playerBet);
-
-            handle_response:
-            while (true) {
-                Console.printDashes();
-                Console.println("Select one of the following options.");
-                response = Console.getStringInput("[quit], [pull lever]");
-                switch (response.toLowerCase()) {
-                    case "quit":
-                        break;
-
-                    case "pull lever":
-                        player.pullLever(slotMachine);
-                        break;
-
-                    default:
-                        Console.println("Invalid command.");
-                        continue handle_response;
-                }
-            }
-        }
-        while (!response.equalsIgnoreCase("quit"));
+    public ReelImage getImage1() {
+        return image1;
     }
 
+    public ReelImage getImage2() {
+        return image2;
+    }
 
-    // Player bets
-    // Player spins
-    // Depending on outcome of spin, player gets payout or loses bet amount
-    // Repeat until rich or poor
+    public ReelImage getImage3() {
+        return image3;
+    }
 
+    public void setImage1(ReelImage image1) {
+        this.image1 = image1;
+    }
+
+    public void setImage2(ReelImage image2) {
+        this.image2 = image2;
+    }
+
+    public void setImage3(ReelImage image3) {
+        this.image3 = image3;
+    }
+
+    @Override
+    public void run() {
+
+    }
 }

@@ -1,9 +1,11 @@
 package leon.casino.games.cardgames.poker;
 
-import leon.casino.Profile;
+import leon.casino.profile.Profile;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.time.LocalDate;
 
 public class TestPokerPlayer {
     private PokerPlayer pokerPlayer;
@@ -12,7 +14,7 @@ public class TestPokerPlayer {
 
     @Before
     public void setup() {
-        this.testProfile = new Profile("TestProfile", 99999999);
+        this.testProfile = new Profile("TestProfile", null, null);
         this.pokerPlayer = new PokerPlayer(testProfile);
     }
 

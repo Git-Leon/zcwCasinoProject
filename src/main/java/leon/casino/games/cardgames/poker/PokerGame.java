@@ -2,9 +2,9 @@ package leon.casino.games.cardgames.poker;
 
 
 import leon.casino.BetCreator;
-import leon.casino.Profile;
-import leon.casino.ProfileManager;
-import leon.casino.games.GameInterface;
+import leon.casino.profile.Profile;
+import leon.casino.profile.ProfileManager;
+import leon.casino.games.utils.GameInterface;
 
 import leon.casino.games.cardgames.CardDealer;
 import leon.tools.Console;
@@ -14,14 +14,14 @@ import java.util.ArrayList;
 /**
  * Created by jarrydstamatelos on 5/9/17.
  */
-public class PokerGame implements GameInterface {
+public class PokerGame implements GameInterface<PokerPlayer> {
     private final ArrayList<PokerPlayer> players = new ArrayList<>();
     private final CardDealer dealer = new CardDealer();
 
     private void setup() {
         Console.println("Beginning a game of poker...");
         int numberOfPlayers = Console.getIntegerInput("How many players will be playing?");
-        Profile[] profiles = ProfileManager.getProfiles(numberOfPlayers);
+        Profile[] profiles = ProfileManager.DEPRECATED_INSTANCE.createProfiles(numberOfPlayers);
 
         // creation of players
         for (Profile profile : profiles) {
@@ -52,11 +52,31 @@ public class PokerGame implements GameInterface {
     }
 
 
+    @Override
+    public PokerPlayer[] getPlayers() {
+        return new PokerPlayer[0];
+    }
+
+    @Override
+    public void addPlayer(PokerPlayer player) {
+
+    }
+
+    @Override
+    public void removePlayer(PokerPlayer player) {
+
+    }
+
+    @Override
+    public Boolean contains(PokerPlayer player) {
+        return null;
+    }
+
     /**
      * Set up the game
      * allow each player to
      */ // TODO - Implement game-ending logic
-    public void play() {
+    public void run() {
         setup();
 
         String input;

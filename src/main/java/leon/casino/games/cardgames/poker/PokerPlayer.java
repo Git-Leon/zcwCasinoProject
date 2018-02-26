@@ -1,6 +1,6 @@
 package leon.casino.games.cardgames.poker;
 
-import leon.casino.Profile;
+import leon.casino.profile.Profile;
 import leon.casino.games.cardgames.CardPlayer;
 
 public class PokerPlayer extends CardPlayer {

@@ -1,10 +1,9 @@
 package leon.casino.games.cardgames.blackjack;
 
-import leon.casino.Profile;
-import leon.casino.ProfileManager;
-import leon.casino.games.GameInterface;
+import leon.casino.games.utils.Game;
+import leon.casino.profile.Profile;
+import leon.casino.profile.ProfileManager;
 import leon.casino.games.cardgames.blackjack.player.BlackJackPlayer;
-import leon.casino.games.cardgames.blackjack.player.BlackJackPlayerState;
 import leon.tools.Console;
 
 import java.util.Arrays;
@@ -13,37 +12,39 @@ import java.util.List;
 /**
  * Created by leon.hunter on 1/29/2017.
  */
-public class BlackJackGame implements GameInterface {
-    private List<BlackJackPlayer> currentPlayers;
+public class BlackJackGame extends Game<BlackJackPlayer> {
+    private List<BlackJackPlayer> players;
     private BlackJackDealer dealer;
 
-    public void start() {
-        setup();
-        play();
-        dealer.hit();
-        play();
+
+    @Override
+    public BlackJackPlayer[] getPlayers() {
+        return players.stream().toArray(BlackJackPlayer[]::new);
     }
 
-    public void play() {
-        for (BlackJackPlayer player : currentPlayers) {
-            play(player);
-        }
+
+    @Override
+    public void addPlayer(BlackJackPlayer player) {
+        players.add(player);
     }
 
-    private void play(BlackJackPlayer player) {
-        String moveDecision;
-        do {
-            // black jack card player
-            BlackJackPlayerState playerState = BlackJackPlayerState.getState(player);
+    @Override
+    public void removePlayer(BlackJackPlayer player) {
+        players.remove(player);
+    }
 
-            BlackJackGameDecision gameDecision = BlackJackGameDecision.getDecision(playerState);
-            gameDecision.perform(this, player);
-            Console.println(gameDecision.name() + "!");
-        } while (player.getState().equals(BlackJackGameDecision.UNDER));
+    @Override
+    public Boolean contains(BlackJackPlayer player) {
+        return players.contains(player);
+    }
+
+    @Override
+    public void run() {
+
     }
 
     public void printTable() {
-        for (BlackJackPlayer player : currentPlayers) {
+        for (BlackJackPlayer player : players) {
             player.printHand();
         }
         dealer.printHand();
@@ -51,15 +52,15 @@ public class BlackJackGame implements GameInterface {
 
     private void setup() {
         Console.println("Beginning a game of blackjack...");
-        this.currentPlayers = Arrays.asList(createPlayers());
+        this.players = Arrays.asList(createPlayers());
         this.dealer = new BlackJackDealer();
 
-        dealer.deal(currentPlayers, 2);
+        dealer.deal(players, 2);
     }
 
     private BlackJackPlayer[] createPlayers() {
         int numberOfPlayers = Console.getIntegerInput("How many players will be playing?");
-        Profile[] profiles = ProfileManager.getProfiles(numberOfPlayers);
+        Profile[] profiles = ProfileManager.DEPRECATED_INSTANCE.getProfiles(numberOfPlayers);
         BlackJackPlayer[] blackJackPlayers = new BlackJackPlayer[numberOfPlayers];
 
         // create profiles

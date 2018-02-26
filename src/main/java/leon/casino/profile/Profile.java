@@ -1,16 +1,16 @@
-package leon.casino;
+package leon.casino.profile;
 
 import leon.tools.Console;
 
 public class Profile {
-    private final long profileId;
+    private final Long profileId;
     private final String name;
-    private double balance;
+    private Double balance;
 
-    public Profile(String name, double balance) {
+    public Profile(String name, Double balance, Long profileId) {
         this.name = name;
         this.balance = balance;
-        this.profileId = Casino.profiles.size();
+        this.profileId = profileId;
     }
 
     public void printInformation() {

@@ -1,7 +1,7 @@
 package leon.casino.games.mechanicalgames;
 
 import leon.casino.games.Player;
-import leon.casino.Profile;
+import leon.casino.profile.Profile;
 
 /**
  * Created by leon on 5/12/17.

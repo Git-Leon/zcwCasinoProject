@@ -1,17 +1,15 @@
 package leon.casino.games.cardgames.blackjack.player;
 
-import leon.casino.DecisionMenu;
-import leon.casino.Profile;
+import leon.casino.AsbtractDecisisonMenu;
 import leon.casino.games.cardgames.blackjack.BlackJackGame;
+import leon.casino.profile.Profile;
 import leon.tools.Console;
 import leon.tools.StringAssembler;
-
-import java.util.Arrays;
 
 /**
  * Created by leon on 2/25/18.
  */
-public class BlackJackPlayerDecisionMenu extends DecisionMenu {
+public class BlackJackPlayerDecisionMenu extends AsbtractDecisisonMenu<BlackJackPlayerDecision> {
     private final BlackJackPlayer player;
     private final BlackJackGame game;
 
@@ -21,20 +19,6 @@ public class BlackJackPlayerDecisionMenu extends DecisionMenu {
         this.game = game;
     }
 
-
-    public static void printValues() {
-        Console.println("Displaying valid player decisions...");
-        Console.println(Arrays.toString(BlackJackPlayerDecision.values()));
-    }
-
-    public void getDecision() {
-        String moveDecision = Console.getStringInput(this.toString()).toUpperCase();
-        try {
-            BlackJackPlayerDecision.valueOf(moveDecision).perform(game, player);
-        } catch (IllegalArgumentException iae) {
-            Console.println("Invalid input! Try again!");
-        }
-    }
 
     @Override
     public String toString() {
@@ -54,13 +38,26 @@ public class BlackJackPlayerDecisionMenu extends DecisionMenu {
         BlackJackPlayerState playerState = BlackJackPlayerState.getState(player);
 
         return new StringAssembler("\n")
-                .append("Welcome to the BlackJack Player-Decision DecisionMenu, [ %s ]!", playerName.toUpperCase())
+                .append("Welcome to the BlackJack Player-Decision Menu, [ %s ]!", playerName.toUpperCase())
                 .append("Your current balance is [ %s ]", playerBalance)
                 .append("Your current hand-total is [ %s ]", playerHandTotal)
                 .append("You have currently bet an amount of [ %s ].", playerBet)
-                .append("Your current play-state is [ %s ].", playerState.name())
+                .append("Your current run-state is [ %s ].", playerState.name())
                 .append("What action would you like to take?")
                 .toString();
     }
 
+    @Override
+    public BlackJackPlayerDecision getInput() {
+        BlackJackPlayerDecision decision = null;
+        String userInput = null;
+        try {
+            userInput = Console.getStringInput();
+            decision = BlackJackPlayerDecision.valueOf(userInput);
+            decision.perform(game, player);
+        } catch (IllegalArgumentException iae) {
+            super.handleIllegalArgument(userInput);
+        }
+        return decision;
+    }
 }
