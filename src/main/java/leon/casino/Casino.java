@@ -1,10 +1,7 @@
 package leon.casino;
 
 
-import leon.casino.cardgames.war.War;
-import leon.casino.cardgames.blackjack.BlackJackGame;
-import leon.casino.cardgames.poker.PokerGame;
-import leon.casino.mechanicalgames.slots.SlotGame;
+import leon.casino.games.GameSelection;
 import leon.tools.Console;
 
 import java.util.ArrayList;
@@ -51,21 +48,7 @@ public final class Casino {
     public static void selectGame() {
         String gameSelection = Console.getStringInput("Would you like to play [Slots], [Roulette], [BlackJack], [Poker], or [War]?");
 
-        // TODO - Replace with GameSelect enum
-        switch (gameSelection.toLowerCase()) {
-            case "war":
-                new War().play();
-                break;
-            case "blackjack":
-                new BlackJackGame().start();
-                break;
-            case "poker":
-                new PokerGame().play();
-                break;
-            case "slots":
-                new SlotGame().play();
-                break;
-        }
+        GameSelection.createGame(gameSelection);
     }
 
     public static final void registerPlayer(Profile someDude) {

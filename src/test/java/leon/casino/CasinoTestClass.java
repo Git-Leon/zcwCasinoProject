@@ -1,8 +1,8 @@
 package leon.casino;
 
-import leon.casino.cardgames.CardDealer;
-import leon.casino.cardgames.CardPlayer;
-import leon.casino.cardgames.cardutilities.Deck;
+import leon.casino.games.cardgames.CardDealer;
+import leon.casino.games.cardgames.CardPlayer;
+import leon.casino.games.cardgames.cardutilities.Deck;
 import org.junit.Before;
 
 /**
