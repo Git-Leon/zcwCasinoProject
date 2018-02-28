@@ -13,21 +13,14 @@ import java.util.function.BiConsumer;
  * Created by leon on 2/26/18.
  */
 public enum CasinoDecision {
-    CREATE((casino, profileManager) -> {
-        int numberOfProfiles = Console.getIntegerInput("How many player profiles would you like to create?");
-        profileManager.createProfiles(numberOfProfiles);
-    }),
-    
     MANAGE_PROFILE((casino, profileManager) -> {
         ProfileManagerMenu profileManagerMenu = new ProfileManagerMenu();
-        profileManagerMenu.display();
         ProfileManagerSelection profileManagerSelection = profileManagerMenu.getInput();
         profileManagerSelection.perform();
     }),
     
     SELECT_GAME((casino, profileManager) -> {
         GameSelectionMenu gameSelectionMenu = new GameSelectionMenu();
-        gameSelectionMenu.display();
         GameSelection gameSelection = gameSelectionMenu.getInput();
         gameSelection.perform();
     }),

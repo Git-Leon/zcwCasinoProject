@@ -1,18 +1,13 @@
 package leon.casino;
 
 
-import leon.casino.games.utils.GameSelection;
-import leon.casino.games.utils.GameSelectionMenu;
-import leon.casino.profile.Profile;
 import leon.casino.profile.ProfileManager;
-import leon.casino.profile.ProfileManagerMenu;
-import leon.casino.profile.ProfileManagerSelection;
 import leon.tools.Console;
 
 /**
  * Created by leon.hunter on 1/29/2017.
  */
-public final class Casino extends AsbtractDecisisonMenu<CasinoDecision> {
+public final class Casino extends AbstractDecisisonMenu<CasinoDecision> {
     ProfileManager profileManager = new ProfileManager();
 
     public Casino() {
@@ -27,8 +22,6 @@ public final class Casino extends AsbtractDecisisonMenu<CasinoDecision> {
 
     @Override
     public CasinoDecision getInput() {
-        super.display();
-        String userInput = Console.getStringInput("What would you like to do?");
-        return CasinoDecision.valueOf(userInput.toUpperCase());
+        return CasinoDecision.valueOf(getInputFromUser().toUpperCase());
     }
 }

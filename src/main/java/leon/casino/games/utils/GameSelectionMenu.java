@@ -1,24 +1,16 @@
 package leon.casino.games.utils;
 
-import leon.casino.AsbtractDecisisonMenu;
-import leon.tools.Console;
+import leon.casino.AbstractDecisisonMenu;
 
 /**
  * Created by leon on 2/25/18.
  */
-public class GameSelectionMenu extends AsbtractDecisisonMenu<GameSelection> {
+public class GameSelectionMenu extends AbstractDecisisonMenu<GameSelection> {
     public GameSelectionMenu() {
         super(GameSelection.values());
     }
 
     public GameSelection getInput() {
-        do {
-            String userInputString = Console.getStringInput("Select an option.");
-            try {
-                return GameSelection.valueOf(userInputString.toUpperCase());
-            } catch (IllegalArgumentException iae) {
-                super.handleIllegalArgument(userInputString);
-            }
-        } while(true);
+        return GameSelection.valueOf(getInputFromUser().toUpperCase());
     }
 }

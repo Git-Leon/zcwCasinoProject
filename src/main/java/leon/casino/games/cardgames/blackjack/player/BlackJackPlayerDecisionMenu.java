@@ -1,15 +1,14 @@
 package leon.casino.games.cardgames.blackjack.player;
 
-import leon.casino.AsbtractDecisisonMenu;
+import leon.casino.AbstractDecisisonMenu;
 import leon.casino.games.cardgames.blackjack.BlackJackGame;
 import leon.casino.profile.Profile;
-import leon.tools.Console;
 import leon.tools.StringAssembler;
 
 /**
  * Created by leon on 2/25/18.
  */
-public class BlackJackPlayerDecisionMenu extends AsbtractDecisisonMenu<BlackJackPlayerDecision> {
+public class BlackJackPlayerDecisionMenu extends AbstractDecisisonMenu<BlackJackPlayerDecision> {
     private final BlackJackPlayer player;
     private final BlackJackGame game;
 
@@ -19,6 +18,10 @@ public class BlackJackPlayerDecisionMenu extends AsbtractDecisisonMenu<BlackJack
         this.game = game;
     }
 
+    @Override
+    public BlackJackPlayerDecision getInput() {
+        return BlackJackPlayerDecision.valueOf(getInputFromUser().toUpperCase());
+    }
 
     @Override
     public String toString() {
@@ -45,19 +48,5 @@ public class BlackJackPlayerDecisionMenu extends AsbtractDecisisonMenu<BlackJack
                 .append("Your current run-state is [ %s ].", playerState.name())
                 .append("What action would you like to take?")
                 .toString();
-    }
-
-    @Override
-    public BlackJackPlayerDecision getInput() {
-        BlackJackPlayerDecision decision = null;
-        String userInput = null;
-        try {
-            userInput = Console.getStringInput();
-            decision = BlackJackPlayerDecision.valueOf(userInput);
-            decision.perform(game, player);
-        } catch (IllegalArgumentException iae) {
-            super.handleIllegalArgument(userInput);
-        }
-        return decision;
     }
 }
