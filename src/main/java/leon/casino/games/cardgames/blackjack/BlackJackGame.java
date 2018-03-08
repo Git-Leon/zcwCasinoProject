@@ -13,9 +13,15 @@ import java.util.List;
  * Created by leon.hunter on 1/29/2017.
  */
 public class BlackJackGame extends Game<BlackJackPlayer> {
-    private List<BlackJackPlayer> players;
     private BlackJackDealer dealer;
 
+    public BlackJackGame() {
+        Console.println("Beginning a game of blackjack...");
+        this.players = Arrays.asList(createPlayers());
+        this.dealer = new BlackJackDealer();
+
+        dealer.deal(players, 2);
+    }
 
     @Override
     public BlackJackPlayer[] getPlayers() {
@@ -48,14 +54,6 @@ public class BlackJackGame extends Game<BlackJackPlayer> {
             player.printHand();
         }
         dealer.printHand();
-    }
-
-    private void setup() {
-        Console.println("Beginning a game of blackjack...");
-        this.players = Arrays.asList(createPlayers());
-        this.dealer = new BlackJackDealer();
-
-        dealer.deal(players, 2);
     }
 
     private BlackJackPlayer[] createPlayers() {

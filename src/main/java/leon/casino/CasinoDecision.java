@@ -16,7 +16,7 @@ public enum CasinoDecision {
     MANAGE_PROFILE((casino, profileManager) -> {
         ProfileManagerMenu profileManagerMenu = new ProfileManagerMenu();
         ProfileManagerSelection profileManagerSelection = profileManagerMenu.getInput();
-        profileManagerSelection.perform();
+        profileManagerSelection.perform(casino, profileManager);
     }),
     
     SELECT_GAME((casino, profileManager) -> {

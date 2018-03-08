@@ -10,7 +10,7 @@ import java.util.List;
  */
 abstract public class Game<T extends PlayerInterface>
         implements GameInterface<T> {
-    private List<T> players = new ArrayList<>();
+    protected List<T> players = new ArrayList<>();
 
     @Override
     public T[] getPlayers() {

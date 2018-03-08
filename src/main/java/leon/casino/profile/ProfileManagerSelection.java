@@ -9,7 +9,7 @@ import java.util.function.BiConsumer;
 /**
  * Created by leon on 2/25/18.
  */
-public enum ProfileManagerSelection implements Decision {
+public enum ProfileManagerSelection {
     SELECT((casino, profileManager) -> {
         int numberOfProfiles = Console.getIntegerInput("How many player profiles would you like to create?");
         profileManager.createProfiles(numberOfProfiles);
@@ -25,8 +25,7 @@ public enum ProfileManagerSelection implements Decision {
         this.profileConsumer = profileConsumer;
     }
 
-    @Override
-    public void perform() {
-
+    public void perform(Casino casino, ProfileManager profileManager) {
+        profileConsumer.accept(casino, profileManager);
     }
 }
