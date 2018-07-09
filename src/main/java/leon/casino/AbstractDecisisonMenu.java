@@ -14,13 +14,11 @@ public abstract class AbstractDecisisonMenu<T extends Enum> implements Menu {
 
     public AbstractDecisisonMenu(T[] enumerations) {
         this.decisions = enumerations;
-        try {
-            for(T decision : enumerations) {
-                assert (decision instanceof Decision);
+        for (T decision : enumerations) {
+            if (!(decision instanceof Decision)) {
+                String errorMessage = "The enumeration provided to the abstract class must implement the `Decision` interface";
+                throw new Error(errorMessage);
             }
-        } catch (AssertionError ae) {
-            Console.println("The enumeration provided to the abstract class must implement the `Decision` interface");
-            throw ae;
         }
     }
 
@@ -36,6 +34,7 @@ public abstract class AbstractDecisisonMenu<T extends Enum> implements Menu {
         Console.println(toString());
     }
 
+    @Override
     public String toString() {
         return new StringAssembler("\n")
                 .append("Welcome to the %s !", getClass().getSimpleName())

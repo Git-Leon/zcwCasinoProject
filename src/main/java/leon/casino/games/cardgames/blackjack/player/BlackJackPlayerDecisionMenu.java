@@ -41,9 +41,11 @@ public class BlackJackPlayerDecisionMenu extends AbstractDecisisonMenu<BlackJack
         BlackJackPlayerState playerState = BlackJackPlayerState.getState(player);
 
         return new StringAssembler("\n")
-                .append("Welcome to the BlackJack Player-Decision Menu, [ %s ]!", playerName.toUpperCase())
-                .append("Your current balance is [ %s ]", playerBalance)
-                .append("Your current hand-total is [ %s ]", playerHandTotal)
+                .append(super.toString())
+                .append("Profile Name: [ %s ]", playerName)
+                .append("Your current balance is [ %s ].", playerBalance)
+                .append("Your current hand-total is [ %s ].", playerHandTotal)
+                .append("The dealer's current hand-total is [ %s ].", dealerHandTotal)
                 .append("You have currently bet an amount of [ %s ].", playerBet)
                 .append("Your current run-state is [ %s ].", playerState.name())
                 .append("What action would you like to take?")

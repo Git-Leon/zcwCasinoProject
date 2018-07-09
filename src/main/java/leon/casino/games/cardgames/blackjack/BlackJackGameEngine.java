@@ -8,7 +8,7 @@ import leon.tools.Console;
 /**
  * Created by leon on 2/25/18.
  */
-public class BlackJackGameEngine extends GameEngine<BlackJackGame, BlackJackPlayer> {
+public class BlackJackGameEngine extends GameEngine<BlackJackPlayer, BlackJackGame> {
     public BlackJackGameEngine() {
         super(new BlackJackGame());
     }
@@ -22,12 +22,5 @@ public class BlackJackGameEngine extends GameEngine<BlackJackGame, BlackJackPlay
             gameDecision.perform(this.getGame(), player);
             Console.println(gameDecision.name() + "!");
         } while (player.getState().equals(BlackJackGameEngineDecision.UNDER));
-    }
-
-    @Override
-    public void run() {
-        for(BlackJackPlayer player : getGame().getPlayers()) {
-            evaluateTurn(player);
-        }
     }
 }

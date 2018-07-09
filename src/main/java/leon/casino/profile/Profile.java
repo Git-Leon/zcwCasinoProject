@@ -22,17 +22,21 @@ public class Profile {
         Console.println("\tId:\t\t\t %s", getProfileId());
     }
 
-    public void increaseBalance(double amount) {
+
+    /**
+     *
+     * @param amount
+     * @return true if the amount is positive
+     */
+    public boolean increaseBalance(double amount) {
         double oldBalance = getBalance();
         double newBalance = oldBalance + amount;
-        String deltaStr = newBalance > oldBalance ? "increased" : "decreased";
-
         setBalance(newBalance);
-        Console.println("[ %s ]'s balance has %s from [ %s ] to [ %s ]", name, deltaStr, oldBalance, newBalance);
+        return amount > 0;
     }
 
     public void decreaseBalance(double amount) {
-        increaseBalance(amount * -1);
+        increaseBalance(-amount);
     }
 
     public Double createBetAmount() {

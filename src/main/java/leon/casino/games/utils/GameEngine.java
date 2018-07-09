@@ -6,11 +6,11 @@ import leon.casino.games.PlayerInterface;
  * Created by leon on 2/25/18.
  */
 public abstract class GameEngine<
-        GameType extends GameInterface,
-        GameTypePlayer extends PlayerInterface>
-        implements GameEngineInterface<GameType, GameTypePlayer> {
+        GameTypePlayer extends PlayerInterface,
+        GameType extends GameInterface<GameTypePlayer>>
+        implements GameEngineInterface<GameTypePlayer, GameType> {
 
-    private final GameType game;
+    protected final GameType game;
 
     public GameEngine(GameType game) {
         this.game = game;
@@ -19,6 +19,13 @@ public abstract class GameEngine<
     @Override
     public GameType getGame() {
         return game;
+    }
+
+    public final void run() {
+        game.run();
+        for(GameTypePlayer player : getGame().getPlayers()) {
+            evaluateTurn(player);
+        }
     }
 
 }

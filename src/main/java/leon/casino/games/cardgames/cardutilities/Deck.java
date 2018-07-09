@@ -1,8 +1,6 @@
 package leon.casino.games.cardgames.cardutilities;
 
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Created by leon.hunter on 2/1/2017.
@@ -41,11 +39,18 @@ public class Deck implements Iterable<Card> {
     }
 
     @Override
-    public Iterator iterator() {
+    public Iterator<Card> iterator() {
         return cardStack.iterator();
     }
 
     public int size() {
         return cardStack.size();
+    }
+
+    @Override
+    public String toString() {
+        List<Card> list = new ArrayList<>();
+        iterator().forEachRemaining(list::add);
+        return list.toString();
     }
 }

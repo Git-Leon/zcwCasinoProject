@@ -6,6 +6,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by leon on 5/11/17.
  */
@@ -20,6 +23,8 @@ public class TestBlackJackPlayer {
     
     @Test
     public void testGetBet() {
+        Set s = new HashSet();
+        s.add()
         // : Given
         double expected = 9999;
         BlackJackPlayer bjp = new BlackJackPlayer(testProfile, expected);

@@ -7,7 +7,6 @@ import leon.tools.Console;
  * Created by leon on 2/25/18.
  */
 public class BetCreator {
-
     public static Double createBetAmount(Profile profile) {
         Console.printDashes();
         double playerBalance = profile.getBalance();
