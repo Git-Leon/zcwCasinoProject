@@ -1,6 +1,7 @@
 package leon.casino.games.utils;
 
 import leon.casino.games.PlayerInterface;
+import leon.casino.profile.Profile;
 
 import java.util.ArrayList;
 import java.util.List;

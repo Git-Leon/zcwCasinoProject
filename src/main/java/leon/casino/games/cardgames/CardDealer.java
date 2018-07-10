@@ -42,11 +42,6 @@ public class CardDealer extends CardPlayer {
             deal(player, numberOfCards);
         }
     }
-
-    public final void deal(CardPlayer[] players, int numberOfCards) {
-        deal(Arrays.asList(players), numberOfCards);
-    }
-
 }
 
 

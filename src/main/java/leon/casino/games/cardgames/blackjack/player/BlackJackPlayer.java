@@ -8,12 +8,11 @@ import leon.tools.StringAssembler;
  * Created by leon on 5/11/17.
  */
 public class BlackJackPlayer extends CardPlayer {
-    private final double bet;
+    private double bet;
     private BlackJackPlayerState state;
 
-    public BlackJackPlayer(Profile profile, Double bet) {
+    public BlackJackPlayer(Profile profile) {
         super(profile);
-        this.bet = bet;
         this.state = BlackJackPlayerState.UNDER;
     }
 

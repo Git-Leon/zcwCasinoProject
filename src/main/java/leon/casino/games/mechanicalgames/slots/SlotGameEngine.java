@@ -68,4 +68,9 @@ public class SlotGameEngine extends GameEngine<SlotPlayer, SlotGame> {
             return response;
         }
     }
+
+    @Override
+    protected SlotPlayer convertToPlayer(Profile profile) {
+        return new SlotPlayer(profile);
+    }
 }

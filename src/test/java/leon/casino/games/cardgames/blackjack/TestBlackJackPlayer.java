@@ -23,16 +23,14 @@ public class TestBlackJackPlayer {
     
     @Test
     public void testGetBet() {
-        Set s = new HashSet();
-        s.add()
         // : Given
         double expected = 9999;
-        BlackJackPlayer bjp = new BlackJackPlayer(testProfile, expected);
+        BlackJackPlayer bjp = new BlackJackPlayer(testProfile);
 
         // : When
         double actual = bjp.getBetAmount();
 
         // : Then
-        Assert.assertEquals(actual, expected, 0);
+        Assert.assertEquals(expected, actual, 0);
     }
 }

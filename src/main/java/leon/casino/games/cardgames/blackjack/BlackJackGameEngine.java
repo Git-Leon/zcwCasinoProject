@@ -1,8 +1,9 @@
 package leon.casino.games.cardgames.blackjack;
 
-import leon.casino.games.utils.GameEngine;
 import leon.casino.games.cardgames.blackjack.player.BlackJackPlayer;
 import leon.casino.games.cardgames.blackjack.player.BlackJackPlayerState;
+import leon.casino.games.utils.GameEngine;
+import leon.casino.profile.Profile;
 import leon.tools.Console;
 
 /**
@@ -14,7 +15,7 @@ public class BlackJackGameEngine extends GameEngine<BlackJackPlayer, BlackJackGa
     }
 
     @Override
-    public void evaluateTurn(BlackJackPlayer player) {
+    public final void evaluateTurn(BlackJackPlayer player) {
         do {
             BlackJackPlayerState playerState = BlackJackPlayerState.getState(player);
 
@@ -23,4 +24,10 @@ public class BlackJackGameEngine extends GameEngine<BlackJackPlayer, BlackJackGa
             Console.println(gameDecision.name() + "!");
         } while (player.getState().equals(BlackJackGameEngineDecision.UNDER));
     }
+
+    @Override
+    protected final BlackJackPlayer convertToPlayer(Profile profile) {
+        return new BlackJackPlayer(profile);
+    }
+
 }

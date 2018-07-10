@@ -1,13 +1,12 @@
 package leon.casino.games.cardgames.blackjack;
 
+import leon.casino.games.cardgames.blackjack.player.BlackJackPlayer;
 import leon.casino.games.utils.Game;
 import leon.casino.profile.Profile;
 import leon.casino.profile.ProfileManager;
-import leon.casino.games.cardgames.blackjack.player.BlackJackPlayer;
 import leon.tools.Console;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by leon.hunter on 1/29/2017.
@@ -64,8 +63,7 @@ public class BlackJackGame extends Game<BlackJackPlayer> {
         // create profiles
         for (int i = 0; i < blackJackPlayers.length; i++) {
             Profile profile = profiles[i];
-            double betAmount = profile.createBetAmount();
-            BlackJackPlayer player = new BlackJackPlayer(profile, betAmount);
+            BlackJackPlayer player = new BlackJackPlayer(profile);
             blackJackPlayers[i] = player;
         }
         return blackJackPlayers;

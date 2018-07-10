@@ -1,6 +1,10 @@
 package leon.casino.games.utils;
 
 import leon.casino.games.PlayerInterface;
+import leon.casino.profile.Profile;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by leon on 2/25/18.
@@ -20,6 +24,17 @@ public abstract class GameEngine<
     public GameType getGame() {
         return game;
     }
+
+    protected List<GameTypePlayer> convertToPlayers(Profile[] profiles) {
+        List<GameTypePlayer> playerList = new ArrayList<>();
+        for(Profile profile : profiles) {
+            GameTypePlayer player = this.convertToPlayer(profile);
+            playerList.add(player);
+        }
+        return playerList;
+    }
+
+    protected abstract GameTypePlayer convertToPlayer(Profile profile);
 
     public final void run() {
         game.run();
