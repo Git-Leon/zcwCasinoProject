@@ -17,7 +17,7 @@ public class PokerGameEngine extends GameEngine<PokerPlayer, PokerGame> {
     }
 
     @Override
-    protected PokerPlayer convertToPlayer(Profile profile) {
+    public PokerPlayer convertToPlayer(Profile profile) {
         return new PokerPlayer(profile);
     }
 }

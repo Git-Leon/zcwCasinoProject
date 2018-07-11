@@ -11,7 +11,7 @@ import java.util.function.BiConsumer;
  */
 public enum ProfileManagerSelection {
     SELECT((casino, profileManager) -> {
-        int numberOfProfiles = Console.getIntegerInput("How many player profiles would you like to create?");
+        int numberOfProfiles = Console.getIntegerInput("How many player profileList would you like to create?");
         profileManager.createProfiles(numberOfProfiles);
     }),
 

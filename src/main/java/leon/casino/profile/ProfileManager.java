@@ -27,7 +27,7 @@ public class ProfileManager {
     }
 
     /**
-     * @param numberOfPlayers - number of profiles to create
+     * @param numberOfPlayers - number of profileList to create
      * @return array of respective profile objects
      */
     public Profile[] createProfiles(int numberOfPlayers) {
@@ -41,7 +41,7 @@ public class ProfileManager {
 
     /**
      * Request each user to make action regarding their profile
-     * @param numberOfPlayers - number of players anticipated to generate profiles
+     * @param numberOfPlayers - number of playerList anticipated to generate profileList
      * @return array of respective profile objects
      */
     public Profile[] getProfiles(int numberOfPlayers) {
@@ -77,8 +77,8 @@ public class ProfileManager {
             }
             Console.println("[ %s ] is not a profile-id that our records recognize.", playerId);
         } else {
-            Console.println("There are currently no profiles in our records.");
-            Console.println("Try creating some player-profiles first.");
+            Console.println("There are currently no profileList in our records.");
+            Console.println("Try creating some player-profileList first.");
         }
         return createProfile();
     }
@@ -87,7 +87,7 @@ public class ProfileManager {
      * Print information from each profile in memory
      */
     public void printProfilesInformation() {
-        Console.println("Displaying a list of player-profiles registered at our Casino...");
+        Console.println("Displaying a list of player-profileList registered at our Casino...");
         for (Profile profile : profiles) {
             profile.printInformation();
         }

@@ -2,16 +2,20 @@ package leon.casino.games.cardgames.blackjack;
 
 import leon.casino.games.cardgames.blackjack.player.BlackJackPlayer;
 import leon.casino.games.cardgames.blackjack.player.BlackJackPlayerState;
+import leon.casino.games.utils.Game;
 import leon.casino.games.utils.GameEngine;
 import leon.casino.profile.Profile;
 import leon.tools.Console;
+
+import java.util.List;
 
 /**
  * Created by leon on 2/25/18.
  */
 public class BlackJackGameEngine extends GameEngine<BlackJackPlayer, BlackJackGame> {
-    public BlackJackGameEngine() {
-        super(new BlackJackGame());
+    public BlackJackGameEngine(List<Profile> profiles) {
+        super(new BlackJackGame(), profiles);
+        getGame().addPlayers(convertToPlayers(profiles));
     }
 
     @Override
@@ -26,8 +30,7 @@ public class BlackJackGameEngine extends GameEngine<BlackJackPlayer, BlackJackGa
     }
 
     @Override
-    protected final BlackJackPlayer convertToPlayer(Profile profile) {
+    public final BlackJackPlayer convertToPlayer(Profile profile) {
         return new BlackJackPlayer(profile);
     }
-
 }

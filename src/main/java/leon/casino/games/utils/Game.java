@@ -1,6 +1,7 @@
 package leon.casino.games.utils;
 
 import leon.casino.games.PlayerInterface;
+import leon.casino.games.cardgames.blackjack.player.BlackJackPlayer;
 import leon.casino.profile.Profile;
 
 import java.util.ArrayList;
@@ -9,29 +10,37 @@ import java.util.List;
 /**
  * Created by leon on 2/25/18.
  */
-abstract public class Game<T extends PlayerInterface>
-        implements GameInterface<T> {
-    protected List<T> players = new ArrayList<>();
+abstract public class Game<PlayerType extends PlayerInterface>
+        implements GameInterface<PlayerType> {
+    protected final List<PlayerType> playerList;
 
-    @Override
-    public T[] getPlayers() {
-        return (T[]) players.stream().toArray();
+    public Game() {
+        this.playerList = new ArrayList<>();
     }
 
     @Override
-    public void addPlayer(T player) {
+    public final List<PlayerType> getPlayers() {
+        return playerList;
+    }
+
+    @Override
+    public final void addPlayer(PlayerType player) {
         if (!contains(player)) {
-            players.add(player);
+            playerList.add(player);
         }
     }
 
     @Override
-    public void removePlayer(T player) {
-        players.add(player);
+    public final void removePlayer(PlayerType player) {
+        playerList.add(player);
     }
 
     @Override
-    public Boolean contains(T player) {
-        return players.contains(player);
+    public final  Boolean contains(PlayerType player) {
+        return playerList.contains(player);
+    }
+
+    public final void addPlayers(List<PlayerType> players) {
+        players.forEach(this::addPlayer);
     }
 }

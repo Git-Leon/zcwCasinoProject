@@ -14,12 +14,29 @@ public class TestProfile {
     }
 
     @Test
-    public void testGetBalance() {
-        Assert.assertEquals(testProfile.getBalance(), 99999999, 0);
+    public void testIncreaseBalance() {
+        // Given
+        Profile profile = new Profile(null, 0.0, null);
+        Double expected = 9999.0;
+
+        // When
+        profile.increaseBalance(expected);
+        Double actual = profile.getBalance();
+
+        // Then
+        Assert.assertEquals(expected, actual, 0);
     }
 
     @Test
     public void testGetName() {
-        Assert.assertEquals(testProfile.getName(), "TestProfile");
+        // Given
+        String expected = "Leon";
+        Profile profile = new Profile(expected, null, null);
+
+        // When
+        String actual = profile.getName();
+
+        // Then
+        Assert.assertEquals(expected, actual);
     }
 }

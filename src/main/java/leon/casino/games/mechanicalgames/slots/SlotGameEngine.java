@@ -70,7 +70,7 @@ public class SlotGameEngine extends GameEngine<SlotPlayer, SlotGame> {
     }
 
     @Override
-    protected SlotPlayer convertToPlayer(Profile profile) {
+    public SlotPlayer convertToPlayer(Profile profile) {
         return new SlotPlayer(profile);
     }
 }

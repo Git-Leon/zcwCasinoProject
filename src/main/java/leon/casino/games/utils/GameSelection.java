@@ -5,29 +5,28 @@ import leon.casino.Decision;
 import leon.casino.games.cardgames.blackjack.BlackJackGameEngine;
 import leon.casino.games.cardgames.poker.PokerGameEngine;
 import leon.casino.games.mechanicalgames.slots.SlotGameEngine;
+import leon.casino.profile.Profile;
 
+import java.util.List;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
  * Created by leon on 2/25/18.
  */
 public enum GameSelection implements Decision {
-    BLACKJACK(BlackJackGameEngine::new),
-    POKER(PokerGameEngine::new),
-    SLOTS(SlotGameEngine::new);
+    BLACKJACK((profileList) -> new BlackJackGameEngine(profileList)),
+    POKER((profileList) -> new PokerGameEngine()),
+    SLOTS((profileList) -> new SlotGameEngine());
 
 
-    private final Supplier<GameEngineInterface> gameConstructor;
+    private final Function<List<Profile>, GameEngineInterface> gameConstructor;
 
-    GameSelection(Supplier<GameEngineInterface> gameConstructor) {
+    GameSelection(Function<List<Profile>, GameEngineInterface> gameConstructor) {
         this.gameConstructor = gameConstructor;
     }
 
-    public void perform() {
-        create().run();
-    }
-
-    public GameEngineInterface create() {
-        return gameConstructor.get();
+    public GameEngineInterface create(List<Profile> profileList) {
+        return gameConstructor.apply(profileList);
     }
 }

@@ -10,6 +10,7 @@ import leon.casino.games.cardgames.CardDealer;
 import leon.tools.Console;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by jarrydstamatelos on 5/9/17.
@@ -20,10 +21,10 @@ public class PokerGame implements GameInterface<PokerPlayer> {
 
     private void setup() {
         Console.println("Beginning a game of poker...");
-        int numberOfPlayers = Console.getIntegerInput("How many players will be playing?");
+        int numberOfPlayers = Console.getIntegerInput("How many playerList will be playing?");
         Profile[] profiles = ProfileManager.DEPRECATED_INSTANCE.createProfiles(numberOfPlayers);
 
-        // creation of players
+        // creation of playerList
         for (Profile profile : profiles) {
             PokerPlayer player = new PokerPlayer(profile);
             players.add(player);
@@ -53,8 +54,8 @@ public class PokerGame implements GameInterface<PokerPlayer> {
 
 
     @Override
-    public PokerPlayer[] getPlayers() {
-        return new PokerPlayer[0];
+    public List<PokerPlayer> getPlayers() {
+        return null;
     }
 
     @Override
@@ -122,7 +123,7 @@ public class PokerGame implements GameInterface<PokerPlayer> {
     /**
      * organically derives highest bet amount from environment
      *
-     * @return value of the highest bid amongst the players
+     * @return value of the highest bid amongst the playerList
      */
     public double getGreatestBet() {
         double highestBet = -1; // temporary value

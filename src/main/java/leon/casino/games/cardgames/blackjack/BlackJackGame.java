@@ -6,7 +6,7 @@ import leon.casino.profile.Profile;
 import leon.casino.profile.ProfileManager;
 import leon.tools.Console;
 
-import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by leon.hunter on 1/29/2017.
@@ -15,32 +15,8 @@ public class BlackJackGame extends Game<BlackJackPlayer> {
     private BlackJackDealer dealer;
 
     public BlackJackGame() {
-        Console.println("Beginning a game of blackjack...");
-        this.players = Arrays.asList(createPlayers());
         this.dealer = new BlackJackDealer();
-
-        dealer.deal(players, 2);
-    }
-
-    @Override
-    public BlackJackPlayer[] getPlayers() {
-        return players.stream().toArray(BlackJackPlayer[]::new);
-    }
-
-
-    @Override
-    public void addPlayer(BlackJackPlayer player) {
-        players.add(player);
-    }
-
-    @Override
-    public void removePlayer(BlackJackPlayer player) {
-        players.remove(player);
-    }
-
-    @Override
-    public Boolean contains(BlackJackPlayer player) {
-        return players.contains(player);
+        dealer.deal(playerList, 2);
     }
 
     @Override
@@ -49,24 +25,10 @@ public class BlackJackGame extends Game<BlackJackPlayer> {
     }
 
     public void printTable() {
-        for (BlackJackPlayer player : players) {
+        for (BlackJackPlayer player : playerList) {
             player.printHand();
         }
         dealer.printHand();
-    }
-
-    private BlackJackPlayer[] createPlayers() {
-        int numberOfPlayers = Console.getIntegerInput("How many players will be playing?");
-        Profile[] profiles = ProfileManager.DEPRECATED_INSTANCE.getProfiles(numberOfPlayers);
-        BlackJackPlayer[] blackJackPlayers = new BlackJackPlayer[numberOfPlayers];
-
-        // create profiles
-        for (int i = 0; i < blackJackPlayers.length; i++) {
-            Profile profile = profiles[i];
-            BlackJackPlayer player = new BlackJackPlayer(profile);
-            blackJackPlayers[i] = player;
-        }
-        return blackJackPlayers;
     }
 
 

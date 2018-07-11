@@ -5,6 +5,7 @@ import leon.casino.games.cardgames.blackjack.player.BlackJackPlayer;
 import leon.casino.games.cardgames.blackjack.player.BlackJackPlayerDecisionMenu;
 import leon.casino.games.cardgames.blackjack.player.BlackJackPlayerState;
 
+import java.util.Optional;
 import java.util.function.BiConsumer;
 
 /**
@@ -47,9 +48,10 @@ public enum BlackJackGameEngineDecision implements BlackJackGameDecision {
         this.operation = operation;
     }
 
-    public void perform(BlackJackGame game, BlackJackPlayer player) {
+    public Void perform(BlackJackGame game, BlackJackPlayer player) {
         operation.accept(game, player);
         player.setState(getPlayerState());
+        return null;
     }
 
     public BlackJackPlayerState getPlayerState() {

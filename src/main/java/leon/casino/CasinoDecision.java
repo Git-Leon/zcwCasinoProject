@@ -1,5 +1,6 @@
 package leon.casino;
 
+import leon.casino.games.utils.GameEngineInterface;
 import leon.casino.games.utils.GameSelection;
 import leon.casino.games.utils.GameSelectionMenu;
 import leon.casino.profile.ProfileManager;
@@ -22,7 +23,8 @@ public enum CasinoDecision {
     SELECT_GAME((casino, profileManager) -> {
         GameSelectionMenu gameSelectionMenu = new GameSelectionMenu();
         GameSelection gameSelection = gameSelectionMenu.getInput();
-        gameSelection.perform();
+        GameEngineInterface gameEngine = gameSelection.create(profileManager.profiles);
+        gameEngine.run();
     }),
     
     EXIT((casino, profileManager) -> {

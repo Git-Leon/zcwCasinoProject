@@ -33,7 +33,8 @@ public enum BlackJackPlayerDecision implements BlackJackGameDecision {
         this.operation = operation;
     }
 
-    public void perform(BlackJackGame game, BlackJackPlayer player) {
+    public Void perform(BlackJackGame game, BlackJackPlayer player) {
         operation.accept(game, player);
+        return null;
     }
 }
