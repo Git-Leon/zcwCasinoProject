@@ -5,6 +5,7 @@ import leon.casino.games.Player;
 import leon.casino.profile.Profile;
 import leon.casino.games.cardgames.cardutilities.Card;
 import leon.casino.games.cardgames.cardutilities.Deck;
+import leon.tools.StringAssembler;
 
 import java.util.ArrayList;
 
@@ -29,6 +30,14 @@ public class CardPlayer extends Player {
             total += card.getValue();
         }
         return total;
+    }
+
+    @Override
+    public String toString() {
+        StringAssembler stringAssembler = new StringAssembler("\n");
+        stringAssembler.append(super.toString());
+        hand.forEach((card) -> stringAssembler.append(card.toString()));
+        return stringAssembler.toString();
     }
 
 

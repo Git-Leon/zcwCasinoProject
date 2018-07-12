@@ -12,19 +12,23 @@ import java.util.function.BiConsumer;
  * Created by leon on 2/25/18.
  */
 public enum BlackJackGameEngineDecision implements BlackJackGameDecision {
-
     BLACKJACK((game, player) -> {
+        /** Increase player's earnings by `player.getAmount()`
+         * set state of player to be BLACKJACK */
         player.getProfile().increaseBalance(player.getBetAmount());
         player.setState(BlackJackPlayerState.BLACKJACK);
     }),
 
     BUST((game, player) -> {
+        /** Decrease player's earnings by `player.getAmount()`
+         * set state of player to be BUST */
         player.getProfile().decreaseBalance(player.getBetAmount());
         player.setState(BlackJackPlayerState.BUST);
     }),
 
 
     UNDER((game, player) -> {
+        /** Create a decision menu to get input from user */
         BlackJackPlayerDecisionMenu blackJackPlayerDecisionMenu = new BlackJackPlayerDecisionMenu(game, player);
         blackJackPlayerDecisionMenu.getInput();
     }),
@@ -40,24 +44,28 @@ public enum BlackJackGameEngineDecision implements BlackJackGameDecision {
         playerProfile.increaseBalance(rewardMultiplier * playerBet);
     });
 
-
-
     private final BiConsumer<BlackJackGame, BlackJackPlayer> operation;
 
     BlackJackGameEngineDecision(BiConsumer<BlackJackGame, BlackJackPlayer> operation) {
         this.operation = operation;
     }
 
+    /**
+     * @param game The game to operate on
+     * @param player The player to operate on
+     * @return Void; this method must conform to its interface, but does not return anything
+     */
     public Void perform(BlackJackGame game, BlackJackPlayer player) {
         operation.accept(game, player);
-        player.setState(getPlayerState());
+        BlackJackPlayerState currentPlayerState = BlackJackPlayerState.valueOf(this.name());
+        player.setState(currentPlayerState);
         return null;
     }
 
-    public BlackJackPlayerState getPlayerState() {
-        return BlackJackPlayerState.valueOf(this.name());
-    }
-
+    /**
+     * @param playerState state of player
+     * @return the decision to be actioned after evaluating the player's state
+     */
     public static BlackJackGameEngineDecision getDecision(BlackJackPlayerState playerState) {
         return BlackJackGameEngineDecision.valueOf(playerState.name());
     }

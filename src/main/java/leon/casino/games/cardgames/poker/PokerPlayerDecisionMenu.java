@@ -1,49 +1,42 @@
-package leon.casino.games.cardgames.blackjack.player;
+package leon.casino.games.cardgames.poker;
 
 import leon.casino.AbstractDecisisonMenu;
-import leon.casino.games.cardgames.blackjack.BlackJackGame;
+import leon.casino.games.cardgames.blackjack.player.BlackJackPlayerState;
 import leon.casino.profile.Profile;
 import leon.tools.StringAssembler;
 
-/**
- * Created by leon on 2/25/18.
- */
-public class BlackJackPlayerDecisionMenu extends AbstractDecisisonMenu<BlackJackPlayerDecision, BlackJackPlayer> {
-    private final BlackJackGame game;
-
-    public BlackJackPlayerDecisionMenu(BlackJackGame game, BlackJackPlayer player) {
-        super(BlackJackPlayerDecision.values(), player);
-        this.game = game;
+abstract public class PokerPlayerDecisionMenu extends AbstractDecisisonMenu<PokerPlayerDecision, PokerPlayer> {
+    public PokerPlayerDecisionMenu(PokerPlayerDecision[] enumerations, PokerPlayer playerInterface) {
+        super(enumerations, playerInterface);
     }
 
     @Override
-    public BlackJackPlayerDecision getInput() {
-        return BlackJackPlayerDecision.valueOf(getInputFromUser().toUpperCase());
+    public PokerPlayerDecision getInput() {
+        return null;
     }
 
     @Override
     public String toString() {
         // profile
         Profile playerProfile = player.getProfile();
-        String playerName = playerProfile.getName();
-
-        // gambling
         double playerBalance = playerProfile.getBalance();
-        int playerBet = player.getBetAmount().intValue();
+        String playerName = playerProfile.getName();
 
         // card player
         int playerHandTotal = player.getHandTotal();
+        double playerBet = player.getBetAmount();
 
         // black jack card player
-        BlackJackPlayerState playerState = BlackJackPlayerState.getState(player);
+        PokerPlayerState playerState = PokerPlayerState.getState(player);
 
         return new StringAssembler("\n")
+                .append(super.toString())
                 .append("Profile Name: [ %s ]", playerName)
                 .append("Your current balance is [ %s ].", playerBalance)
                 .append("Your current hand-total is [ %s ].", playerHandTotal)
                 .append("You have currently bet an amount of [ %s ].", playerBet)
                 .append("Your current run-state is [ %s ].", playerState.name())
-                .append(super.toString())
+                .append("What action would you like to take?")
                 .toString();
     }
 }

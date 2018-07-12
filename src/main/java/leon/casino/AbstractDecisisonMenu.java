@@ -1,5 +1,7 @@
 package leon.casino;
 
+import leon.casino.games.PlayerInterface;
+import leon.casino.games.utils.GameInterface;
 import leon.tools.Console;
 import leon.tools.StringAssembler;
 import leon.tools.StringUtils;
@@ -9,12 +11,17 @@ import java.util.Arrays;
 /**
  * Created by leon on 2/25/18.
  */
-public abstract class AbstractDecisisonMenu<T extends Enum> implements Menu {
-    private final T[] decisions;
+public abstract class AbstractDecisisonMenu<
+        DecisionEnum extends Enum,
+        PlayerType extends PlayerInterface> implements Menu {
+    
+    private final DecisionEnum[] decisions;
+    protected final PlayerType player;
 
-    public AbstractDecisisonMenu(T[] enumerations) {
+    public AbstractDecisisonMenu(DecisionEnum[] enumerations, PlayerType player) {
+        this.player = player;
         this.decisions = enumerations;
-        for (T decision : enumerations) {
+        for (DecisionEnum decision : enumerations) {
             if (!(decision instanceof Decision)) {
                 String errorMessage = "The enumeration provided to the abstract class must implement the `Decision` interface";
                 throw new Error(errorMessage);
@@ -44,10 +51,10 @@ public abstract class AbstractDecisisonMenu<T extends Enum> implements Menu {
     }
 
     // TODO -
-    public abstract T getInput();
+    public abstract DecisionEnum getInput();
 
     public void handleIllegalArgument(String input) {
-        Console.println("Invalid input! %s is not valid input!", input);
+        Console.println("[ %s ] is not valid input!", input);
         display();
     }
 }
