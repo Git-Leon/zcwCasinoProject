@@ -2,6 +2,7 @@ package leon.casino.games.utils;
 
 import leon.casino.games.PlayerInterface;
 import leon.casino.profile.Profile;
+import leon.casino.profile.ProfileManager;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
 
 /**
  * Created by leon on 2/25/18.
+ * Responsible for mediating user-input and BlackJackGame
  */
 public abstract class GameEngine<
         GameTypePlayer extends PlayerInterface,

@@ -13,14 +13,14 @@ import java.util.function.BiConsumer;
  */
 public enum BlackJackGameEngineDecision implements BlackJackGameDecision {
     BLACKJACK((game, player) -> {
-        /** Increase player's earnings by `player.getAmount()`
+        /** Increase player's earnings by `player.getBetAmount()`
          * set state of player to be BLACKJACK */
         player.getProfile().increaseBalance(player.getBetAmount());
         player.setState(BlackJackPlayerState.BLACKJACK);
     }),
 
     BUST((game, player) -> {
-        /** Decrease player's earnings by `player.getAmount()`
+        /** Decrease player's earnings by `player.getBetAmount()`
          * set state of player to be BUST */
         player.getProfile().decreaseBalance(player.getBetAmount());
         player.setState(BlackJackPlayerState.BUST);

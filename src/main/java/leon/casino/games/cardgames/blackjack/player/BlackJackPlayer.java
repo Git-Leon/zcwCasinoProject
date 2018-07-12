@@ -1,5 +1,6 @@
 package leon.casino.games.cardgames.blackjack.player;
 
+import leon.casino.games.utils.gamblegames.GamblerInterface;
 import leon.casino.profile.Profile;
 import leon.casino.games.cardgames.CardPlayer;
 import leon.tools.StringAssembler;
@@ -7,7 +8,7 @@ import leon.tools.StringAssembler;
 /**
  * Created by leon on 5/11/17.
  */
-public class BlackJackPlayer extends CardPlayer {
+public class BlackJackPlayer extends CardPlayer implements GamblerInterface {
     private double bet;
     private BlackJackPlayerState state;
 
@@ -16,8 +17,24 @@ public class BlackJackPlayer extends CardPlayer {
         this.state = BlackJackPlayerState.UNDER;
     }
 
+    @Override
+    public void increaseBalance(double amount) {
+        profile.increaseBalance(amount);
+    }
+
+    @Override
+    public void decreaseBalance(double amount) {
+        profile.decreaseBalance(amount);
+    }
+
+    @Override
     public Double getBetAmount() {
         return this.bet;
+    }
+
+    @Override
+    public void setBetAmount(Double amount) {
+        this.bet = amount;
     }
 
     public BlackJackPlayerState getState() {
@@ -28,6 +45,7 @@ public class BlackJackPlayer extends CardPlayer {
         this.state = state;
     }
 
+
     public String toString() {
         return new StringAssembler("\n")
                 .append("Player name = %s", profile.getName())
@@ -36,4 +54,5 @@ public class BlackJackPlayer extends CardPlayer {
                 .append("Bet amount = %s", getBetAmount())
                 .toString();
     }
+
 }

@@ -11,20 +11,27 @@ import java.util.List;
 
 /**
  * Created by leon on 2/25/18.
+ * Responsible for mediating user-input and BlackJackGame
  */
 public class BlackJackGameEngine extends GameEngine<BlackJackPlayer, BlackJackGame> {
     public BlackJackGameEngine(List<Profile> profiles) {
-        super(new BlackJackGame(), profiles);
+        super(new BlackJackGame(profiles), profiles);
         getGame().addPlayers(convertToPlayers(profiles));
     }
 
     @Override
     public final void evaluateTurn(BlackJackPlayer player) {
         do {
+            // get current player state
             BlackJackPlayerState playerState = BlackJackPlayerState.getState(player);
 
+            // inform user of current state; prompt user for decision;
             BlackJackGameEngineDecision gameDecision = BlackJackGameEngineDecision.getDecision(playerState);
-            gameDecision.perform(this.getGame(), player);
+
+            // perform user decision
+            gameDecision.perform(getGame(), player);
+
+            // display game decision-name; i.e. - UNDER, BLACKJACK, BUST, STAND
             Console.println(gameDecision.name() + "!");
         } while (player.getState().equals(BlackJackGameEngineDecision.UNDER));
     }

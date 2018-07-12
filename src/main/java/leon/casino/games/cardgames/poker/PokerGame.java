@@ -1,12 +1,13 @@
 package leon.casino.games.cardgames.poker;
 
 
-import leon.casino.BetCreator;
+import leon.casino.games.utils.gamblegames.BetCreator;
+import leon.casino.games.utils.gamblegames.GambleGame;
 import leon.casino.profile.Profile;
 import leon.casino.profile.ProfileManager;
-import leon.casino.games.utils.GameInterface;
 
 import leon.casino.games.cardgames.CardDealer;
+import leon.casino.profile.ProfileManagerMenu;
 import leon.tools.Console;
 
 import java.util.ArrayList;
@@ -15,26 +16,30 @@ import java.util.List;
 /**
  * Created by jarrydstamatelos on 5/9/17.
  */
-public class PokerGame implements GameInterface<PokerPlayer> {
-    private final ArrayList<PokerPlayer> players = new ArrayList<>();
+public class PokerGame extends GambleGame<PokerPlayer> {
     private final CardDealer dealer = new CardDealer();
+
+    public PokerGame(List<Profile> profileList) {
+        super(profileList);
+    }
 
     private void setup() {
         Console.println("Beginning a game of poker...");
-        int numberOfPlayers = Console.getIntegerInput("How many playerList will be playing?");
-        Profile[] profiles = ProfileManager.DEPRECATED_INSTANCE.createProfiles(numberOfPlayers);
 
-        // creation of playerList
-        for (Profile profile : profiles) {
-            PokerPlayer player = new PokerPlayer(profile);
-            players.add(player);
+        // create players
+        int numberOfPlayers = Console.getIntegerInput("How many players will be playing?");
+        ProfileManager profileManager = new ProfileManager(super.profileList);
+        for (int i = 0; i < numberOfPlayers; i++) {
+            Profile profile = profileManager.selectProfile();
+            PokerPlayer pokerPlayer = new PokerPlayer(profile);
+            playerList.add(pokerPlayer);
         }
 
         // dealing of cards
-        dealer.deal(players, 5);
+        dealer.deal(playerList, 5);
 
         // placing of bets
-        for(PokerPlayer player : players) {
+        for (PokerPlayer player : playerList) {
             player.setBetAmount(BetCreator.createBetAmount(player.getProfile()));
         }
 
@@ -43,7 +48,7 @@ public class PokerGame implements GameInterface<PokerPlayer> {
 
     public PokerPlayer getWinner() {
         PokerPlayer highestEvaluatedPlayer = null;
-        for (PokerPlayer currentEvaluatedPlayer : players) {
+        for (PokerPlayer currentEvaluatedPlayer : playerList) {
             // TODO - Implement game-winning logic
             //if(currentEvaluatedPlayer.evaluate() > highestEvaluatedPlayer.evaluate()) {
             //highestEvaluatedPlayer = currentEvaluatedPlayer;
@@ -52,26 +57,6 @@ public class PokerGame implements GameInterface<PokerPlayer> {
         return highestEvaluatedPlayer;
     }
 
-
-    @Override
-    public List<PokerPlayer> getPlayers() {
-        return null;
-    }
-
-    @Override
-    public void addPlayer(PokerPlayer player) {
-
-    }
-
-    @Override
-    public void removePlayer(PokerPlayer player) {
-
-    }
-
-    @Override
-    public Boolean contains(PokerPlayer player) {
-        return null;
-    }
 
     /**
      * Set up the game
@@ -86,22 +71,22 @@ public class PokerGame implements GameInterface<PokerPlayer> {
             Console.println("A round just ended...");
             Console.println("I do not know the game-ending condition...");
             input = Console.getStringInput("[end game], [continue]");
-        } while(!input.equalsIgnoreCase("end game"));
+        } while (!input.equalsIgnoreCase("end game"));
     }
 
     private void playRound() {
         Console.printDashes();
 
         Console.println("A new round has begun.");
-        for (PokerPlayer player : players) {
-            play(player);
+        for (PokerPlayer player : playerList) {
+            evaluateTurn(player);
         }
 
         Console.println("Determining the winner...");
         PokerPlayer winner = getWinner();
 
         Console.println("Congratulations, [ %s ], you got lucky.", winner.getProfile().getName());
-        winner.collectEarnings(getPotValue());
+        winner.increaseBalance(getPotValue());
     }
 
     /**
@@ -111,7 +96,7 @@ public class PokerGame implements GameInterface<PokerPlayer> {
      */
     public double getPotValue() {
         double potValue = -1; // temporary value
-        for (PokerPlayer player : players) {
+        for (PokerPlayer player : playerList) {
             double playerBetAmount = player.getBetAmount();
             if (playerBetAmount > potValue) {
                 potValue += playerBetAmount;
@@ -127,7 +112,7 @@ public class PokerGame implements GameInterface<PokerPlayer> {
      */
     public double getGreatestBet() {
         double highestBet = -1; // temporary value
-        for (PokerPlayer player : players) {
+        for (PokerPlayer player : playerList) {
             double playerBetAmount = player.getBetAmount();
             if (playerBetAmount > highestBet) {
                 highestBet = playerBetAmount;
@@ -137,7 +122,7 @@ public class PokerGame implements GameInterface<PokerPlayer> {
     }
 
 
-    void play(PokerPlayer player) {
+    void evaluateTurn(PokerPlayer player) {
         Profile playerProfile = player.getProfile();
         String playerName = playerProfile.getName();
         double playerBalance = playerProfile.getBalance();
@@ -156,7 +141,7 @@ public class PokerGame implements GameInterface<PokerPlayer> {
         String choice = Console.getStringInput("[fold], [call], [raise]");
         switch (choice.toLowerCase()) { // TODO - Replace with PokerPlayerDecision enum
             case "fold":
-                players.remove(player);
+                playerList.remove(player);
                 break;
 
             case "call":
@@ -170,9 +155,8 @@ public class PokerGame implements GameInterface<PokerPlayer> {
 
             default:
                 Console.println("Invalid user input!");
-                play(player);
+                evaluateTurn(player);
                 break;
         }
     }
-
 }

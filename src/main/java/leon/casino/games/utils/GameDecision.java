@@ -1,5 +1,6 @@
 package leon.casino.games.utils;
 
+import leon.casino.Decision;
 import leon.casino.games.Player;
 
 import java.util.Optional;
@@ -10,6 +11,7 @@ import java.util.Optional;
  */
 public interface GameDecision<
         GameType extends GameInterface,
-        PlayerType extends Player> {
+        PlayerType extends Player>
+        extends Decision {
     <ReturnType> ReturnType perform(GameType game, PlayerType player);
 }

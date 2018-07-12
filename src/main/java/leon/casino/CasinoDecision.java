@@ -13,11 +13,11 @@ import java.util.function.BiConsumer;
 /**
  * Created by leon on 2/26/18.
  */
-public enum CasinoDecision {
+public enum CasinoDecision implements Decision {
     MANAGE_PROFILE((casino, profileManager) -> {
         ProfileManagerMenu profileManagerMenu = new ProfileManagerMenu();
         ProfileManagerSelection profileManagerSelection = profileManagerMenu.getInput();
-        profileManagerSelection.perform(casino, profileManager);
+        profileManagerSelection.perform(profileManager);
     }),
     
     SELECT_GAME((casino, profileManager) -> {

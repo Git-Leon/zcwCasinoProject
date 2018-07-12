@@ -8,11 +8,13 @@ import leon.tools.StringAssembler;
 /**
  * Created by leon on 2/25/18.
  */
-public class BlackJackPlayerDecisionMenu extends AbstractDecisisonMenu<BlackJackPlayerDecision, BlackJackPlayer> {
+public class BlackJackPlayerDecisionMenu extends AbstractDecisisonMenu<BlackJackPlayerDecision> {
     private final BlackJackGame game;
+    private final BlackJackPlayer player;
 
     public BlackJackPlayerDecisionMenu(BlackJackGame game, BlackJackPlayer player) {
-        super(BlackJackPlayerDecision.values(), player);
+        super(BlackJackPlayerDecision.values());
+        this.player = player;
         this.game = game;
     }
 

@@ -16,8 +16,8 @@ import java.util.function.Supplier;
  */
 public enum GameSelection implements Decision {
     BLACKJACK((profileList) -> new BlackJackGameEngine(profileList)),
-    POKER((profileList) -> new PokerGameEngine()),
-    SLOTS((profileList) -> new SlotGameEngine());
+    POKER((profileList) -> new PokerGameEngine(profileList)),
+    SLOTS((profileList) -> new SlotGameEngine(profileList));
 
 
     private final Function<List<Profile>, GameEngineInterface> gameConstructor;

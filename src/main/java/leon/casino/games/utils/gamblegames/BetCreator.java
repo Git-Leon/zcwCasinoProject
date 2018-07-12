@@ -1,4 +1,4 @@
-package leon.casino;
+package leon.casino.games.utils.gamblegames;
 
 import leon.casino.profile.Profile;
 import leon.tools.Console;

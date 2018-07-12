@@ -1,13 +1,15 @@
 package leon.casino.games.cardgames.poker;
 
 import leon.casino.AbstractDecisisonMenu;
-import leon.casino.games.cardgames.blackjack.player.BlackJackPlayerState;
 import leon.casino.profile.Profile;
 import leon.tools.StringAssembler;
 
-abstract public class PokerPlayerDecisionMenu extends AbstractDecisisonMenu<PokerPlayerDecision, PokerPlayer> {
-    public PokerPlayerDecisionMenu(PokerPlayerDecision[] enumerations, PokerPlayer playerInterface) {
-        super(enumerations, playerInterface);
+abstract public class PokerPlayerDecisionMenu extends AbstractDecisisonMenu<PokerPlayerDecision> {
+    private final PokerPlayer player;
+
+    public PokerPlayerDecisionMenu(PokerPlayerDecision[] enumerations, PokerPlayer pokerPlayer) {
+        super(enumerations);
+        this.player = pokerPlayer;
     }
 
     @Override

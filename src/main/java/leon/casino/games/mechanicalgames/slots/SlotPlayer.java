@@ -1,5 +1,6 @@
 package leon.casino.games.mechanicalgames.slots;
 
+import leon.casino.games.utils.gamblegames.GamblerInterface;
 import leon.tools.Console;
 import leon.casino.profile.Profile;
 import leon.casino.games.mechanicalgames.MechanicalPlayer;
@@ -7,7 +8,7 @@ import leon.casino.games.mechanicalgames.MechanicalPlayer;
 /**
  * Created by sarahweisser on 5/11/17.
  */
-public class SlotPlayer extends MechanicalPlayer {
+public class SlotPlayer extends MechanicalPlayer implements GamblerInterface {
 
     private double bet = 5;
 
@@ -37,4 +38,13 @@ public class SlotPlayer extends MechanicalPlayer {
     }
 
 
+    @Override
+    public void increaseBalance(double amount) {
+        profile.increaseBalance(amount);
+    }
+
+    @Override
+    public void decreaseBalance(double amount) {
+        increaseBalance(-amount);
+    }
 }

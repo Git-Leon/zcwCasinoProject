@@ -9,8 +9,12 @@ import java.util.List;
  * Created by leon.hunter on 2/1/2017.
  */
 public class ProfileManager {
-    public static volatile ProfileManager DEPRECATED_INSTANCE = new ProfileManager();
-    public List<Profile> profiles = new ArrayList<Profile>();
+    public final List<Profile> profiles;
+
+    public ProfileManager(List<Profile> profiles) {
+        this.profiles = profiles;
+    }
+
     /**
      * @return array of respective profile objects
      */
@@ -20,7 +24,7 @@ public class ProfileManager {
 
         String name = Console.getStringInput("Enter player's name");
         double startingBalance = Console.getDoubleInput("Enter balance");
-        Profile newPlayer = new Profile(name, startingBalance, (long)profiles.size());
+        Profile newPlayer = new Profile(name, startingBalance, (long) profiles.size());
         registerPlayer(newPlayer);
 
         return newPlayer;
@@ -41,6 +45,7 @@ public class ProfileManager {
 
     /**
      * Request each user to make action regarding their profile
+     *
      * @param numberOfPlayers - number of playerList anticipated to generate profileList
      * @return array of respective profile objects
      */
@@ -52,7 +57,7 @@ public class ProfileManager {
             String userDecision = Console.getStringInput("Would you like to [create] a new profile, or [select] a preexisting?");
             if ("create".equalsIgnoreCase(userDecision)) {
                 profiles[i] = createProfile();
-            } else if("select".equalsIgnoreCase(userDecision)) {
+            } else if ("select".equalsIgnoreCase(userDecision)) {
                 profiles[i] = selectProfile();
             } else {
                 Console.println("[ %s ] is not recognized as a valid command.", userDecision);
@@ -64,6 +69,7 @@ public class ProfileManager {
 
     /**
      * Select profile from memory, create profile if none exists
+     *
      * @return selected profile
      */
     public Profile selectProfile() {

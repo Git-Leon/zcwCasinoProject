@@ -12,14 +12,11 @@ import java.util.Arrays;
  * Created by leon on 2/25/18.
  */
 public abstract class AbstractDecisisonMenu<
-        DecisionEnum extends Enum,
-        PlayerType extends PlayerInterface> implements Menu {
-    
-    private final DecisionEnum[] decisions;
-    protected final PlayerType player;
+        DecisionEnum extends Enum> implements Menu {
 
-    public AbstractDecisisonMenu(DecisionEnum[] enumerations, PlayerType player) {
-        this.player = player;
+    private final DecisionEnum[] decisions;
+
+    public AbstractDecisisonMenu(DecisionEnum[] enumerations) {
         this.decisions = enumerations;
         for (DecisionEnum decision : enumerations) {
             if (!(decision instanceof Decision)) {

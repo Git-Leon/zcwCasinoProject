@@ -1,15 +1,23 @@
 package leon.casino.games.mechanicalgames.slots;
 
 import leon.casino.games.utils.Game;
+import leon.casino.games.utils.gamblegames.GambleGame;
+import leon.casino.profile.Profile;
+
+import java.util.List;
 
 /**
  * Created by sarahweisser on 5/11/17.
  */
 
-public class SlotGame extends Game<SlotPlayer> {
+public class SlotGame extends GambleGame<SlotPlayer> {
     private ReelImage image1;
     private ReelImage image2;
     private ReelImage image3;
+
+    public SlotGame(List<Profile> profileList) {
+        super(profileList);
+    }
 
     public void spinReel() {
         this.image1 = ReelImage.getRandom();

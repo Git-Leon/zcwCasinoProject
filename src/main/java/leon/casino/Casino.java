@@ -4,11 +4,13 @@ package leon.casino;
 import leon.casino.profile.ProfileManager;
 import leon.tools.Console;
 
+import java.util.ArrayList;
+
 /**
  * Created by leon.hunter on 1/29/2017.
  */
 public final class Casino extends AbstractDecisisonMenu<CasinoDecision> {
-    ProfileManager profileManager = new ProfileManager();
+    ProfileManager profileManager = new ProfileManager(new ArrayList<>());
 
     public Casino() {
         super(CasinoDecision.values());

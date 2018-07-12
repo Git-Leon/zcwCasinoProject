@@ -37,7 +37,7 @@ public class TestPokerPlayer {
         double startingBalance = testProfile.getBalance();
         double earnings = 100;
         double expected = startingBalance + earnings;
-        pokerPlayer.collectEarnings(earnings);
+        pokerPlayer.increaseBalance(earnings);
 
         // : When
         double actual = testProfile.getBalance();

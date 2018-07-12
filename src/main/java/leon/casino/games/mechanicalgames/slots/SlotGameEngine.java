@@ -4,13 +4,15 @@ import leon.casino.games.utils.GameEngine;
 import leon.casino.profile.Profile;
 import leon.tools.Console;
 
+import java.util.List;
+
 /**
  * Created by danielprahl on 5/9/17.
  */
 public class SlotGameEngine extends GameEngine<SlotPlayer, SlotGame> {
 
-    public SlotGameEngine() {
-        super(new SlotGame());
+    public SlotGameEngine(List<Profile> profileList) {
+        super(new SlotGame(profileList));
     }
 
     @Override

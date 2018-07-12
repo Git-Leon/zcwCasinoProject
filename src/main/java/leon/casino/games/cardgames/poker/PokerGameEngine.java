@@ -3,12 +3,14 @@ package leon.casino.games.cardgames.poker;
 import leon.casino.games.utils.GameEngine;
 import leon.casino.profile.Profile;
 
+import java.util.List;
+
 /**
  * Created by leon on 3/8/18.
  */
 public class PokerGameEngine extends GameEngine<PokerPlayer, PokerGame> {
-    public PokerGameEngine() {
-        super(new PokerGame());
+    public PokerGameEngine(List<Profile> profileList) {
+        super(new PokerGame(profileList));
     }
 
     @Override

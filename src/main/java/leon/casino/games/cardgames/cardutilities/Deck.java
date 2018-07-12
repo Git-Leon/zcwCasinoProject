@@ -12,8 +12,7 @@ public class Deck implements Iterable<Card> {
     public Deck() {
         for (Suit suit : Suit.values()) {
             for (Rank rank : Rank.values()) {
-                Card card = new Card(rank, suit);
-                cardStack.push(card);
+                push(new Card(rank, suit));
             }
         }
     }
