@@ -6,8 +6,8 @@ import com.github.curriculeon.casino.games.PlayerInterface;
  * Created by leon on 2/25/18.
  */
 public interface GameEngineInterface<
-        GameType extends GameInterface,
-        GameTypePlayer extends PlayerInterface>
+        GameTypePlayer extends PlayerInterface,
+        GameType extends GameInterface<GameTypePlayer>>
         extends Runnable {
 
     GameType getGame();

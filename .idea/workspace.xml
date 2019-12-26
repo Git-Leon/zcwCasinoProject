@@ -2,82 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a32b23f-5add-4ed3-8d88-45927525d4d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/CasinoInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/DecisionInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/profile/ProfileInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/profile/ProfileManagerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/AbstractDecisisonMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/AbstractDecisionMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/BetCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/BetCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/Casino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/Casino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/CasinoDecision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/CasinoDecision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/Decision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/Decision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/PlayerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/PlayerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/CardDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/CardDealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/CardPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/CardPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/blackjack/BlackJackDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/blackjack/BlackJackDealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/blackjack/BlackJackGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/blackjack/BlackJackGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/blackjack/BlackJackGameDecision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/blackjack/BlackJackGameDecision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/blackjack/BlackJackGameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/blackjack/BlackJackGameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/blackjack/BlackJackGameEngineDecision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/blackjack/BlackJackGameEngineDecision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/blackjack/player/BlackJackPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/blackjack/player/BlackJackPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/blackjack/player/BlackJackPlayerDecision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/blackjack/player/BlackJackPlayerDecision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/blackjack/player/BlackJackPlayerDecisionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/blackjack/player/BlackJackPlayerDecisionMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/blackjack/player/BlackJackPlayerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/blackjack/player/BlackJackPlayerState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/cardutilities/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/cardutilities/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/cardutilities/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/cardutilities/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/cardutilities/Rank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/cardutilities/Rank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/cardutilities/Suit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/cardutilities/Suit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/poker/PokerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/poker/PokerGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/poker/PokerGameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/poker/PokerGameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/poker/PokerHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/poker/PokerHand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/poker/PokerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/poker/PokerPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/cardgames/war/War.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/war/War.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/mechanicalgames/MechanicalPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/mechanicalgames/MechanicalPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/mechanicalgames/slots/ReelImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/mechanicalgames/slots/ReelImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/mechanicalgames/slots/SlotGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/mechanicalgames/slots/SlotGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/mechanicalgames/slots/SlotGameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/mechanicalgames/slots/SlotGameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/mechanicalgames/slots/SlotPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/mechanicalgames/slots/SlotPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/utils/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/utils/GameDecision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameDecision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/utils/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/utils/GameEngineInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameEngineInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/utils/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/utils/GameSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/games/utils/GameSelectionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameSelectionMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/profile/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/profile/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/profile/ProfileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/profile/ProfileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/profile/ProfileManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/profile/ProfileManagerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/casino/profile/ProfileManagerSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/profile/ProfileManagerSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/tools/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/tools/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/tools/RandomUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/tools/RandomUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/tools/StringAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/tools/StringAssembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leon/tools/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/tools/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/TestSuiteFullRegression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/TestSuiteFullRegression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/casino/CasinoTestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/casino/CasinoTestClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/casino/TestProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/casino/TestProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/casino/games/cardgames/TestCardDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/casino/games/cardgames/TestCardDealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/casino/games/cardgames/TestCardPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/casino/games/cardgames/TestCardPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/casino/games/cardgames/blackjack/TestBlackJackDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/casino/games/cardgames/blackjack/TestBlackJackDealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/casino/games/cardgames/blackjack/TestBlackJackPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/casino/games/cardgames/blackjack/TestBlackJackPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/casino/games/cardgames/cardutilities/TestCardDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/casino/games/cardgames/cardutilities/TestCardDeck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/casino/games/cardgames/poker/TestPokerHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/casino/games/cardgames/poker/TestPokerHand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/casino/games/cardgames/poker/TestPokerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/casino/games/cardgames/poker/TestPokerPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/casino/games/mechanicalgames/TestMechanicalPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/casino/games/mechanicalgames/TestMechanicalPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/leon/casino/games/mechanicalgames/slots/TestReelImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/curriculeon/casino/games/mechanicalgames/slots/TestReelImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leon/casino/Casino.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leon/tools/Console$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leon/tools/Console$ConsoleSingleton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leon/tools/Console.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leon/tools/RandomUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/leon/TestSuiteFullRegression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/leon/casino/CasinoTestClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/leon/casino/TestProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/blackjack/BlackJackGameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/blackjack/BlackJackGameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/poker/PokerGameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/cardgames/poker/PokerGameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameEngineInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameEngineInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/curriculeon/casino/games/utils/GameInterface.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,8 +41,8 @@
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.github.curriculeon.casino" />
       <recent name="com.github.curriculeon.casino.profile" />
+      <recent name="com.github.curriculeon.casino" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.github.curriculeon.casino" />

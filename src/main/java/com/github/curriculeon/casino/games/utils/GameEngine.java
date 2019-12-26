@@ -6,9 +6,9 @@ import com.github.curriculeon.casino.games.PlayerInterface;
  * Created by leon on 2/25/18.
  */
 public abstract class GameEngine<
-        GameType extends GameInterface,
-        GameTypePlayer extends PlayerInterface>
-        implements GameEngineInterface<GameType, GameTypePlayer> {
+        GameTypePlayer extends PlayerInterface,
+        GameType extends GameInterface<GameTypePlayer>>
+        implements GameEngineInterface<GameTypePlayer, GameType> {
 
     private final GameType game;
 

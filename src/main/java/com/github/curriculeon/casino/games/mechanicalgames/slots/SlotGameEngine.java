@@ -7,7 +7,7 @@ import com.github.curriculeon.tools.Console;
 /**
  * Created by danielprahl on 5/9/17.
  */
-public class SlotGameEngine extends GameEngine<SlotGame, SlotPlayer> {
+public class SlotGameEngine extends GameEngine<SlotPlayer, SlotGame> {
 
     public SlotGameEngine() {
         super(new SlotGame());

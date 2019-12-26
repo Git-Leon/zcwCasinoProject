@@ -8,7 +8,7 @@ import com.github.curriculeon.tools.Console;
 /**
  * Created by leon on 2/25/18.
  */
-public class BlackJackGameEngine extends GameEngine<BlackJackGame, BlackJackPlayer> {
+public class BlackJackGameEngine extends GameEngine<BlackJackPlayer, BlackJackGame> {
     public BlackJackGameEngine() {
         super(new BlackJackGame());
     }
